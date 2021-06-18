@@ -1,6 +1,6 @@
-const { Schema, model } = require("mongoose");
+import mongoose from "mongoose"
 let required_err = "This is a mandatory field"
-const charSchema = new Schema(
+const charSchema = new mongoose.Schema(
   {
     name: {
       type: String,

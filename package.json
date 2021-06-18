@@ -30,7 +30,7 @@
   "scripts": {
     "start": "node ./build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc && node ./build/src/server.js  || exit 1",
+    "compile": "tsc && node ./build/src/db/index.js  || exit 1",
     "dev": "nodemon -e ts --exec \"npm run compile\" || exit 1"
   },
   "keywords": [],
