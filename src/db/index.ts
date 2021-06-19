@@ -4,7 +4,7 @@ const server = require("../server");
 const endpoints = require("express-list-endpoints")
 mongoose
   .connect(process.env.DB_CONNECTION_STRING, {
-    //useNewUrlParser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
