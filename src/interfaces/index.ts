@@ -1,3 +1,5 @@
+import {Request} from "express"
+
 export interface Character {
     name: string
     isIdea: boolean
@@ -14,3 +16,21 @@ export class Response {
         this.text = text
     }
 }
+interface Cloudinary_file extends Express.Multer.File {
+    filename: string;
+    path: string;
+    size: number
+}
+export interface RequestWithFile extends Request {
+    file: Cloudinary_file
+}
+
+export class ImageRequestBody {
+    file: File
+    text: string
+    constructor(file:File, text:string) {
+        this.file = file
+        this.text = text
+    }
+}
+
