@@ -1,5 +1,8 @@
 import {Request} from "express"
-
+export interface User {
+    email: string
+    username: string
+}
 export interface Character {
     name: string
     isIdea: boolean
@@ -23,6 +26,10 @@ interface Cloudinary_file extends Express.Multer.File {
 }
 export interface RequestWithFile extends Request {
     file: Cloudinary_file
+}
+
+export interface RequestWithUser extends RequestWithFile {
+    user: User
 }
 
 export class ImageRequestBody {

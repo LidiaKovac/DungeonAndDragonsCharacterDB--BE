@@ -30,8 +30,11 @@ character_route.post(
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
 	let validationResult = validateCharacter(req.body)
-	if (validationResult?.status !== 201) {
+	if (validationResult?.status !== 201) { //if validation fails
 		res.status(validationResult?.status!).send(validationResult)
+	} else {
+		const newChar = await new charModel(req.body)
+		res.send(newChar)
 	}
 	//const newChar = new charModel(req.body)
 	   //res.send(200)
