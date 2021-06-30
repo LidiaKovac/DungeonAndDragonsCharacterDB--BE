@@ -1,10 +1,9 @@
 const image_route = require("express").Router();
-import { Request, Response, NextFunction } from "express";
+
+//CLOUDINARY 
 import multer from "multer";
-import { RequestWithFile } from "../../interfaces";
 const cloudinary = require("../../utils/cloudinary");
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
-
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
@@ -12,6 +11,12 @@ const storage = new CloudinaryStorage({
   },
 });
 const cloudinaryMulter = multer({ storage: storage });
+
+//INTERFACES
+import { Response, NextFunction } from "express";
+import { RequestWithFile } from "../../interfaces/requests";
+
+
 image_route.post( //very simple route, only returns the uploaded string
   "/generate",
   cloudinaryMulter.single("moodboard"),

@@ -1,4 +1,5 @@
-import { Character, Response } from "../interfaces";
+import { Response } from "../interfaces";
+import { Character } from "../interfaces/models";
 
 export const validateCharacter = (body: Character) => {
   if (typeof body.name === "string" && typeof body.isIdea === "boolean") {
@@ -21,20 +22,3 @@ export const validateCharacter = (body: Character) => {
           );
     }
 };
-
-// name: {
-//     type: String,
-//     required: required_err,
-//   },
-//   isIdea: {
-//       type: Boolean,
-//       required: required_err
-//   },
-//   moodboard: {
-//       type: [String],
-//       required: false
-//   },
-//   bg: {
-//       type: String,
-//       required: false
-//   }

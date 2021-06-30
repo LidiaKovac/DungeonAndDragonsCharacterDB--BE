@@ -1,7 +1,9 @@
 const userRoute = require("express").Router()
-import {Request, Response, NextFunction} from "express"
-import { RequestWithUser } from "../../interfaces"
+
 import { authenticate } from "../../utils/middlewares"
+
+import {Request, Response, NextFunction} from "express"
+import { RequestWithUser } from "../../interfaces/requests"
 const userModel = require("./user")
 
 userRoute.post("/register", async(req: Request, res: Response, next: NextFunction):Promise<void> => {

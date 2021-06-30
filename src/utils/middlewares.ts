@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express"
-import { RequestWithUser } from "../interfaces"
+import { RequestWithUser } from "../interfaces/requests"
 const bcrypt = require("bcrypt")
 const userModel = require("../services/user/user")
 
