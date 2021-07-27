@@ -4,11 +4,11 @@ const charSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: required_err,
+      required: true,
     },
     isIdea: {
         type: Boolean,
-        required: required_err
+        required: true
     },
     moodboard: {
         type: [String],
@@ -27,5 +27,5 @@ const charSchema = new mongoose.Schema(
 //   const exp = await charSchema.findById(id).populate("profiles");
 //   return post;
 // });
-const charModel = mongoose.model("char", charSchema);
+const charModel = mongoose.model("Chars", charSchema);
 module.exports = charModel;

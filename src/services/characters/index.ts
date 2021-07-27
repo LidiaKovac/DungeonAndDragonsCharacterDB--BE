@@ -18,8 +18,8 @@ character_route.get(
 	"/:id",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-	  const allCharacters = await charModel.find()
-	   res.send(allCharacters)
+		const selectedChars = await charModel.findById(req.params.id)
+		res.send(selectedChars)
 	  } catch (e) {
 		next(e);
 	  }
@@ -29,12 +29,14 @@ character_route.post(
 	"/",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-	let validationResult = validateCharacter(req.body)
-	if (validationResult?.status !== 201) {
-		res.status(validationResult?.status!).send(validationResult)
-	}
-	//const newChar = new charModel(req.body)
-	   //res.send(200)
+		console.log(req.body)
+		let validationResult = validateCharacter(req.body)
+		if (validationResult?.status !== 201) {
+			res.status(validationResult?.status!).send(validationResult)
+		}
+		const newChar = new charModel(req.body)
+		const {_id} = await newChar.save()
+	   	res.status(200).send(_id)
 	  } catch (e) {
 		next(e);
 	  }
