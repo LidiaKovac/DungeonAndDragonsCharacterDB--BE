@@ -9,6 +9,7 @@ userRoute.post("/register", async(req: Request, res: Response, next: NextFunctio
         //console.log(req.body)
         let newUser = await new userModel(req.body)
         await newUser.save()
+        console.log(newUser)
         res.send(newUser)
     } catch (error) {
         next(error)
@@ -18,7 +19,9 @@ userRoute.post("/register", async(req: Request, res: Response, next: NextFunctio
 userRoute.post("/login", authenticate, async(req: RequestWithUser, res: Response, next: NextFunction):Promise<void>=> {
     try {
         console.log(req.user)
-        res.send(req.user)
+        if (req.user) {
+            res.send(req.user)
+        } else res.send({isLogged: false})
     } catch (error) {
         next(error)
     }
