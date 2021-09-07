@@ -15,4 +15,15 @@ classRoute.get("/classes", async (req: Request, res: Response, next: NextFunctio
   }
 });
 
+classRoute.get("/races", async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    axios({
+      method: "get",
+      url: "https://www.dnd5eapi.co/api/races",
+    }).then((races) => res.send(races.data.results));
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = classRoute;
