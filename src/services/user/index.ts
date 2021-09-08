@@ -11,6 +11,7 @@ userRoute.post("/register", async(req: Request, res: Response, next: NextFunctio
         //console.log(req.body)
         let newUser = await new userModel(req.body)
         await newUser.save()
+        console.log("user with IP: ", req.ip, "logged in as: ", newUser)
         res.send(newUser)
     } catch (error) {
         next(error)
@@ -19,8 +20,11 @@ userRoute.post("/register", async(req: Request, res: Response, next: NextFunctio
 
 userRoute.post("/login", authenticate, async(req: RequestWithUser, res: Response, next: NextFunction):Promise<void>=> {
     try {
-        console.log(req.user)
-        res.send(req.user)
+        //console.log(req.user)
+        if (req.user) {
+            console.log("user with IP: ", req.ip, "logged in as: ", req.user)
+            res.send(req.user)
+        } else res.send({isLogged: false})
     } catch (error) {
         next(error)
     }
