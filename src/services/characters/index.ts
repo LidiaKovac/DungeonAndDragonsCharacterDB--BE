@@ -18,7 +18,7 @@ character_route.get(
 	"/:id",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-	  const allCharacters = await charModel.find()
+	  const allCharacters = await charModel.findById(req.params.id)
 	   res.send(allCharacters)
 	  } catch (e) {
 		next(e);

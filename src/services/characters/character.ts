@@ -1,14 +1,13 @@
 import mongoose from "mongoose"
-let required_err = "This is a mandatory field"
 const charSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: required_err,
+      required: true,
     },
-    isIdea: {
-        type: Boolean,
-        required: required_err
+    manual: {
+        type: String, 
+        required: true
     },
     moodboard: {
         type: [String],
