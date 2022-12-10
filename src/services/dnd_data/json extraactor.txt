@@ -1,0 +1,33 @@
+window.onload = async () => {
+	let raceRes = await fetch("https://5e.tools/data/races.json");
+	let { race: races } = await raceRes.json();
+	console.log(races);
+	for await (const race of races) {
+		let res = await fetch(
+			"http://localhost:3001/passive/sources/" + race.source
+		);
+		if (res.status === 200) {
+			let { shorthand, id } = await res.json();
+            console.log(race);
+			let anotherRes = await fetch("http://localhost:3001/passive/race", {
+				method: "POST",
+				body: JSON.stringify({
+					name: race.name,
+					source_name: shorthand,
+					SourceId: id,
+					type: "race",
+					speed: race.speed?.walk || 0,
+					str: race?.ability ? (race?.ability[0]?.str || 0) : 0,
+					int: race?.ability ? (race?.ability[0]?.int || 0) : 0,
+					cos: race?.ability ? (race?.ability[0]?.cos || 0) : 0,
+					cha: race?.ability ? (race?.ability[0]?.cha || 0) : 0,
+					dex: race?.ability ? (race?.ability[0]?.dex || 0) : 0,
+					wis: race?.ability ? (race?.ability[0]?.wis || 0) : 0,
+				}),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
+		}
+	}
+};
