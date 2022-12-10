@@ -6,6 +6,7 @@ import Classes from "./models/classes"
 import Race from "./models/races"
 import User from "./models/user"
 import Source from "./models/sources"
+import RacialTrait from "./models/racial_feat"
 
 config()
 const {SQL_URI} = process.env as {[key:string]: string}
@@ -21,7 +22,7 @@ export const sequelize = new Sequelize(SQL_URI, {
 	},
 })
 
-let models = [Character, Classes, Race, User, Source]
+let models = [Character, Classes, Race, User, Source, RacialTrait]
 models.forEach((model) => {
 	model.initialize(sequelize)
 })

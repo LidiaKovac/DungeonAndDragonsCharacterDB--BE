@@ -1,6 +1,7 @@
 import Character from "./models/character"
 import Classes from "./models/classes"
 import Race from "./models/races"
+import RacialTrait from "./models/racial_feat"
 import Source from "./models/sources"
 import User from "./models/user"
 
@@ -9,7 +10,7 @@ export const initRelations = () => {
     Classes.belongsToMany(Character, {through: "Chars_Class"}) //each class can be assigned to multiple chars
     
     Character.hasOne(Race)
-    Race.belongsToMany(Classes, {through: "Chars_Race"})
+    Race.belongsToMany(Character, {through: "Chars_Race_2"})
 
     Character.hasOne(User)
     User.hasMany(Character)
@@ -19,6 +20,11 @@ export const initRelations = () => {
 
     Race.belongsTo(Source)
     Source.hasMany(Race)
+
+    RacialTrait.belongsTo(Race)
+    RacialTrait.belongsTo(Source)
+    Source.hasMany(RacialTrait)
+    Race.hasMany(RacialTrait)
 
 
 // Material.belongsTo(User)

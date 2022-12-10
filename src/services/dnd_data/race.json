@@ -24,6 +24,18 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Mark of Sentinel Human",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Merfolk",
         "speed": "10",
@@ -84,6 +96,30 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Baalzebul Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
+        "type": "subrace",
+        "name": "Eladrin Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Satyr",
         "speed": "0",
@@ -106,6 +142,30 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "undefined Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant; Drow Descent Half-Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
     },
     {
         "type": "race",
@@ -132,6 +192,18 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Zariel Tiefling",
+        "speed": "0",
+        "str": "1",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "2",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Half-Orc (Mark of Finding)",
         "speed": "0",
@@ -156,6 +228,30 @@
         "source_name": "VGM"
     },
     {
+        "type": "subrace",
+        "name": "Draconblood Dragonborn",
+        "speed": "0",
+        "str": "0",
+        "int": "2",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "EGW"
+    },
+    {
+        "type": "subrace",
+        "name": "Asmodeus Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Orc",
         "speed": "0",
@@ -166,6 +262,18 @@
         "cha": "0",
         "wis": "0",
         "source_name": "EGW"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant; Mark of Detection Half-Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "2",
+        "source_name": "ERLW"
     },
     {
         "type": "race",
@@ -190,6 +298,18 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "undefined Half-Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
     },
     {
         "type": "race",
@@ -264,6 +384,18 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Eladrin Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "DMG"
+    },
+    {
         "type": "race",
         "name": "Lizardfolk",
         "speed": "30",
@@ -274,6 +406,30 @@
         "cha": "0",
         "wis": "1",
         "source_name": "VGM"
+    },
+    {
+        "type": "subrace",
+        "name": "Pallid Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "EGW"
+    },
+    {
+        "type": "subrace",
+        "name": "Duergar Dwarf",
+        "speed": "0",
+        "str": "1",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
     },
     {
         "type": "race",
@@ -312,6 +468,30 @@
         "source_name": "GGR"
     },
     {
+        "type": "subrace",
+        "name": "Mark of Scribing Gnome",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
+        "type": "subrace",
+        "name": "Swiftstride Shifter",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "2",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Satyr",
         "speed": "0",
@@ -322,6 +502,18 @@
         "cha": "2",
         "wis": "0",
         "source_name": "MOT"
+    },
+    {
+        "type": "subrace",
+        "name": "Glasya Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "2",
+        "wis": "0",
+        "source_name": "MTF"
     },
     {
         "type": "race",
@@ -346,6 +538,18 @@
         "cha": "0",
         "wis": "0",
         "source_name": "DMG"
+    },
+    {
+        "type": "subrace",
+        "name": "Water Genasi",
+        "speed": "30",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MPMM"
     },
     {
         "type": "race",
@@ -396,6 +600,42 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Variant; Infernal Legacy Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant; Winged Tiefling",
+        "speed": "30",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Levistus Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "2",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Owlin",
         "speed": "30",
@@ -411,6 +651,30 @@
         "type": "race",
         "name": "Fairy",
         "speed": "30",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "High Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Earth Genasi",
+        "speed": "0",
         "str": "0",
         "int": "0",
         "cos": "0",
@@ -444,6 +708,18 @@
         "source_name": "VGM"
     },
     {
+        "type": "subrace",
+        "name": "Longtooth Shifter",
+        "speed": "0",
+        "str": "2",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Eladrin",
         "speed": "0",
@@ -454,6 +730,30 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "Rock Gnome",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Drow Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "PHB"
     },
     {
         "type": "race",
@@ -480,6 +780,18 @@
         "source_name": "VGM"
     },
     {
+        "type": "subrace",
+        "name": "Mark of Shadow Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Hexblood",
         "speed": "0",
@@ -504,6 +816,30 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Lightfoot Halfling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Stout Halfling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
         "type": "race",
         "name": "Harengon",
         "speed": "0",
@@ -516,6 +852,54 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Ghostwise Halfling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Fire Genasi",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "Deep/Svirfneblin Gnome",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Ravenite Dragonborn",
+        "speed": "0",
+        "str": "2",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "EGW"
+    },
+    {
         "type": "race",
         "name": "Gnome",
         "speed": "0",
@@ -526,6 +910,54 @@
         "cha": "0",
         "wis": "0",
         "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Githzerai Gith",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "2",
+        "source_name": "MTF"
+    },
+    {
+        "type": "subrace",
+        "name": "Fierna Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "2",
+        "wis": "1",
+        "source_name": "MTF"
+    },
+    {
+        "type": "subrace",
+        "name": "Mark of Making Human",
+        "speed": "0",
+        "str": "0",
+        "int": "2",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant; Wood Elf Descent Half-Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
     },
     {
         "type": "race",
@@ -554,6 +986,18 @@
     {
         "type": "race",
         "name": "Goblin",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "Air Genasi",
         "speed": "0",
         "str": "0",
         "int": "0",
@@ -600,6 +1044,42 @@
         "source_name": "FTD"
     },
     {
+        "type": "subrace",
+        "name": "Variant; Hellfire Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Mark of Handling Human",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "2",
+        "source_name": "ERLW"
+    },
+    {
+        "type": "subrace",
+        "name": "undefined Human",
+        "speed": "0",
+        "str": "1",
+        "int": "1",
+        "cos": "0",
+        "dex": "1",
+        "cha": "1",
+        "wis": "1",
+        "source_name": "PHB"
+    },
+    {
         "type": "race",
         "name": "Aasimar",
         "speed": "0",
@@ -610,6 +1090,42 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "Mark of Hospitality Halfling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "1",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
+        "type": "subrace",
+        "name": "Githyanki Gith",
+        "speed": "0",
+        "str": "2",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
+        "type": "subrace",
+        "name": "Wood Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "PHB"
     },
     {
         "type": "race",
@@ -636,6 +1152,30 @@
         "source_name": "DMG"
     },
     {
+        "type": "subrace",
+        "name": "Beasthide Shifter",
+        "speed": "0",
+        "str": "1",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
+        "type": "subrace",
+        "name": "Fallen Aasimar",
+        "speed": "0",
+        "str": "1",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "VGM"
+    },
+    {
         "type": "race",
         "name": "Changeling",
         "speed": "0",
@@ -660,6 +1200,18 @@
         "source_name": "ERLW"
     },
     {
+        "type": "subrace",
+        "name": "Forest Gnome",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
         "type": "race",
         "name": "Sea Elf",
         "speed": "30",
@@ -672,6 +1224,18 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Sea Elf",
+        "speed": "30",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Tortle",
         "speed": "0",
@@ -682,6 +1246,18 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "undefined Dragonborn",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
     },
     {
         "type": "race",
@@ -732,6 +1308,18 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Variant; Mark of Storm Half-Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "2",
+        "wis": "0",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Hobgoblin",
         "speed": "0",
@@ -768,6 +1356,18 @@
         "source_name": "ERLW"
     },
     {
+        "type": "subrace",
+        "name": "Mephistopheles Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Goblin",
         "speed": "0",
@@ -778,6 +1378,30 @@
         "cha": "0",
         "wis": "0",
         "source_name": "DMG"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant Human",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Scourge Aasimar",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "VGM"
     },
     {
         "type": "race",
@@ -792,6 +1416,18 @@
         "source_name": "MPMM"
     },
     {
+        "type": "subrace",
+        "name": "Variant; Aquatic Elf Descent Half-Elf",
+        "speed": "30",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
         "type": "race",
         "name": "Shadar-Kai",
         "speed": "0",
@@ -802,6 +1438,42 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "Shadar-kai Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant; Devil's Tongue Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Deep Gnome",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
     },
     {
         "type": "race",
@@ -840,6 +1512,18 @@
         "source_name": "MOT"
     },
     {
+        "type": "subrace",
+        "name": "Mark of Finding Human",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "2",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Hobgoblin",
         "speed": "0",
@@ -850,6 +1534,18 @@
         "cha": "0",
         "wis": "0",
         "source_name": "MPMM"
+    },
+    {
+        "type": "subrace",
+        "name": "Dispater Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "2",
+        "wis": "0",
+        "source_name": "MTF"
     },
     {
         "type": "race",
@@ -912,6 +1608,18 @@
         "source_name": "GGR"
     },
     {
+        "type": "subrace",
+        "name": "Mark of Healing Halfling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Firbolg",
         "speed": "0",
@@ -934,6 +1642,18 @@
         "cha": "2",
         "wis": "0",
         "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Mark of Warding Dwarf",
+        "speed": "0",
+        "str": "0",
+        "int": "1",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "ERLW"
     },
     {
         "type": "race",
@@ -960,6 +1680,18 @@
         "source_name": "OGA"
     },
     {
+        "type": "subrace",
+        "name": "Wildhunt Shifter",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "1",
+        "cha": "0",
+        "wis": "2",
+        "source_name": "ERLW"
+    },
+    {
         "type": "race",
         "name": "Duergar",
         "speed": "0",
@@ -984,6 +1716,18 @@
         "source_name": "DMG"
     },
     {
+        "type": "subrace",
+        "name": "Mammon Tiefling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "MTF"
+    },
+    {
         "type": "race",
         "name": "Leonin",
         "speed": "0",
@@ -1006,6 +1750,18 @@
         "cha": "0",
         "wis": "1",
         "source_name": "GGR"
+    },
+    {
+        "type": "subrace",
+        "name": "Mark of Passage Human",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "2",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "ERLW"
     },
     {
         "type": "race",
@@ -1041,6 +1797,30 @@
         "dex": "0",
         "cha": "1",
         "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Variant; Moon Elf or Sun Elf Descent Half-Elf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "SCAG"
+    },
+    {
+        "type": "subrace",
+        "name": "Hill Dwarf",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
         "source_name": "PHB"
     },
     {
@@ -1140,6 +1920,18 @@
         "source_name": "ERLW"
     },
     {
+        "type": "subrace",
+        "name": "Lotusden Halfling",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "EGW"
+    },
+    {
         "type": "race",
         "name": "Custom Lineage",
         "speed": "0",
@@ -1186,6 +1978,30 @@
         "cha": "0",
         "wis": "0",
         "source_name": "GGR"
+    },
+    {
+        "type": "subrace",
+        "name": "Mountain Dwarf",
+        "speed": "0",
+        "str": "2",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "0",
+        "source_name": "PHB"
+    },
+    {
+        "type": "subrace",
+        "name": "Protector Aasimar",
+        "speed": "0",
+        "str": "0",
+        "int": "0",
+        "cos": "0",
+        "dex": "0",
+        "cha": "0",
+        "wis": "1",
+        "source_name": "VGM"
     },
     {
         "type": "race",
