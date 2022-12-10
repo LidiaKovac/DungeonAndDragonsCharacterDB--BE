@@ -1,20 +1,32 @@
-//CONNECTION
-const mongoose = require("mongoose");
-const server = require("../server");
-const endpoints = require("express-list-endpoints")
-mongoose
-  .connect(process.env.DB_CONNECTION_STRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    server.listen(process.env.PORT, () => {
-      console.log(
-        "❗ Server is running on",
-        process.env.PORT,
-        " with these endpoints: ",
-        endpoints(server)
-      );
-    });
-  })
-  .catch((e: Error) => console.log(e));
+import {Sequelize} from "sequelize"
+import {config} from "dotenv"
+import { initRelations } from "./relations"
+import Character from "./models/character"
+import Classes from "./models/classes"
+import Race from "./models/races"
+import User from "./models/user"
+import Source from "./models/sources"
+
+config()
+const {SQL_URI} = process.env as {[key:string]: string}
+
+
+export const sequelize = new Sequelize(SQL_URI, {
+	dialect: "postgres",
+	dialectOptions: {
+		ssl: {
+			required: true,
+			rejectUnauthorized: false,
+		},
+	},
+})
+
+let models = [Character, Classes, Race, User, Source]
+models.forEach((model) => {
+	model.initialize(sequelize)
+})
+
+initRelations()
+
+
+

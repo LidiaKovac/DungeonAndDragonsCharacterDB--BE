@@ -1,16 +1,29 @@
-const express = require('express')
-require("dotenv").config()
-const cors = require("cors")
-
+import express from "express"
+import { config } from "dotenv"
+import endpoints from "express-list-endpoints"
+import cors from "cors"
+config()
+import { sequelize } from "./db/index"
+const PORT = process.env.PORT || 3001
 
 const app = express()
 
-const char_route = require("./services/characters")
+import passive_data from "./services/dnd_data/index"
 
-app.use(cors())
 app.use(express.json())
+app.use(cors())
 app.use(require("helmet")())
 
-app.use("/character", char_route)
+app.use("/passive", passive_data)
 
-module.exports = app
+sequelize.sync({ force: false, logging: false, alter: true }).then((result: any) => {
+    app.listen(PORT, () => {
+        console.log(
+            "🌚🌝 Server is running on",
+            PORT,
+            " with these endpoints: ",
+            endpoints(app)
+        );
+    });
+});
+export default app

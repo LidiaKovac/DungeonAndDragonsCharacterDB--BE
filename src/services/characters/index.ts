@@ -1,7 +1,7 @@
 //GENERAL
 const character_route = require("express").Router();
 import { Request, Response, NextFunction } from "express";
-import { validateCharacter } from "../../validation/char";
+// import { validateCharacter } from "../../validation/char";
 const charModel = require("./character")
 character_route.get(
   "/me",
@@ -30,10 +30,10 @@ character_route.post(
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
 		console.log(req.body)
-		let validationResult = validateCharacter(req.body)
-		if (validationResult?.status !== 201) {
-			res.status(validationResult?.status!).send(validationResult)
-		}
+		// let validationResult = validateCharacter(req.body)
+		// if (validationResult?.status !== 201) {
+		// 	res.status(validationResult?.status!).send(validationResult)
+		// }
 		const newChar = new charModel(req.body)
 		const {_id} = await newChar.save()
 	   	res.status(200).send(_id)
