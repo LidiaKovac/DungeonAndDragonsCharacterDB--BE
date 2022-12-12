@@ -1,65 +1,58 @@
 //GENERAL
-const character_route = require("express").Router();
+const characterRoute = require("express").Router();
 import { Request, Response, NextFunction } from "express";
 // import { validateCharacter } from "../../validation/char";
-const charModel = require("./character")
-character_route.get(
-  "/me",
+import Character from "../../db/models/character";
+
+characterRoute.get(
+  "/",
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-	const allCharacters = await charModel.find()
+	const allCharacters = await Character.findAll()
      res.send(allCharacters)
     } catch (e) {
       next(e);
     }
   }
 );
-character_route.get(
+characterRoute.get(
 	"/:id",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-		const selectedChars = await charModel.findById(req.params.id)
+		const selectedChars = await Character.findByPk(req.params.id)
 		res.send(selectedChars)
 	  } catch (e) {
 		next(e);
 	  }
 	}
   );
-character_route.post(
+characterRoute.post(
 	"/",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-		console.log(req.body)
-		// let validationResult = validateCharacter(req.body)
-		// if (validationResult?.status !== 201) {
-		// 	res.status(validationResult?.status!).send(validationResult)
-		// }
-		const newChar = new charModel(req.body)
-		const {_id} = await newChar.save()
-	   	res.status(200).send(_id)
+		
 	  } catch (e) {
 		next(e);
 	  }
 	}
   );
-  character_route.put(
+  characterRoute.put(
 	"/:id",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-	   res.send(200)
 	  } catch (e) {
 		next(e);
 	  }
 	}
   );
-  character_route.delete(
+  characterRoute.delete(
 	"/:id",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-	   res.send(200)
 	  } catch (e) {
 		next(e);
 	  }
 	}
   );
-module.exports = character_route;
+
+export default characterRoute

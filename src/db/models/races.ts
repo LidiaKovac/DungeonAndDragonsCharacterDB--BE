@@ -4,7 +4,8 @@ class Race extends Model {
 
     id!: number
     name!: string
-    source_id!: number
+    source_id!: string
+    source_name!: string
     str!: number;
     cos!: number;
     dex!: number;

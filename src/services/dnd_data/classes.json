@@ -1,125 +1,5 @@
 [
     {
-        "name": "Paladin",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "wis",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "cha"    },
-    {
-        "name": "Cleric",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "wis",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Fighter",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "con",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Spellcaster Sidekick",
-        "source_name": "TCE",
-        "hit_die": null,
-        "prof_1": null,
-        "prof_2": null,
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "1,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
-        "spellAbility": null    },
-    {
-        "name": "Druid",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "int",
-        "prof_2": "wis",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Rogue",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Monk",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "str",
-        "prof_2": "dex",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Druid",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "int",
-        "prof_2": "wis",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Wizard",
-        "source_name": "PHB",
-        "hit_die": "6",
-        "prof_1": "int",
-        "prof_2": "wis",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "int"    },
-    {
-        "name": "Bard",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "4,5,6,7,8,9,10,11,12,14,15,15,16,18,19,19,20,22,22,22",
-        "spellAbility": "cha"    },
-    {
-        "name": "Rogue",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Rogue",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
         "name": "Warrior Sidekick",
         "source_name": "TCE",
         "hit_die": null,
@@ -127,78 +7,131 @@
         "prof_2": null,
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Ranger",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "dex",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "0,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
-        "spellAbility": "wis"    },
-    {
-        "name": "Ranger",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "dex",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "0,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
-        "spellAbility": "wis"    },
-    {
-        "name": "Expert Sidekick",
-        "source_name": "TCE",
-        "hit_die": null,
-        "prof_1": null,
-        "prof_2": null,
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Expert Sidekick",
-        "source_name": "TCE",
-        "hit_die": null,
-        "prof_1": null,
-        "prof_2": null,
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Druid",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "int",
-        "prof_2": "wis",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Cleric",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "wis",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Ranger",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "dex",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "0,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
-        "spellAbility": "wis"    },
+        "spellProgression": "no data",
+        "spellAbility": null,
+        "armorProf": "no data",
+        "weaponProf": "no data",
+        "toolsProf": "no data",
+        "skillProfNum": null,
+        "skillProf": null,
+        "startEquip": null,
+        "ClassTraits": [
+            {
+                "name": " Extra Attack",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "6"
+            },
+            {
+                "name": " Second Wind",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "2"
+            },
+            {
+                "name": " Indomitable",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "11"
+            },
+            {
+                "name": " Martial Role",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": "Sidekick Class",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Improved Defense",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "10"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "14"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "8"
+            },
+            {
+                "name": " Battle Readiness",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "7"
+            },
+            {
+                "name": " Improved Critical",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "3"
+            },
+            {
+                "name": " Indomitable Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "18"
+            },
+            {
+                "name": " Bonus Proficiencies",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Second Wind Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "20"
+            },
+            {
+                "name": " Extra Attack Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "15"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": null
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "16"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "19"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warrior Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "12"
+            }
+        ]
+    },
     {
         "name": "Bard",
         "source_name": "PHB",
@@ -208,47 +141,214 @@
         "prof_3": null,
         "prof_4": null,
         "spellProgression": "4,5,6,7,8,9,10,11,12,14,15,15,16,18,19,19,20,22,22,22",
-        "spellAbility": "cha"    },
-    {
-        "name": "Fighter",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "con",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Cleric",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "wis",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Paladin",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "wis",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "cha"    },
-    {
-        "name": "Fighter",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "con",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
+        "spellAbility": "cha",
+        "armorProf": "light",
+        "weaponProf": "simple,{@item hand crossbow|phb|hand crossbows},{@item longsword|phb|longswords},{@item rapier|phb|rapiers},{@item shortsword|phb|shortswords}",
+        "toolsProf": "three {@item musical instrument|PHB|musical instruments} of your choice",
+        "skillProfNum": "3",
+        "skillProf": "any",
+        "startEquip": "(a) a {@item rapier|phb}, (b) a {@item longsword|phb}, or (c) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},(a) a {@item diplomat's pack|phb} or (b) an {@item entertainer's pack|phb},(a) a {@item lute|phb} or (b) any other {@filter musical instrument|items|miscellaneous=mundane|type=instrument},{@item Leather armor|phb}, and a {@item dagger|phb}",
+        "ClassTraits": [
+            {
+                "name": " Bardic Inspiration (d10)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Magical Inspiration",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Song of Rest (d12)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Spell Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Magical Secrets",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Song of Rest (d8)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "9"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Jack of All Trades",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Bardic Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Magical Inspiration",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Countercharm",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": "Bardic Inspiration",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Superior Inspiration",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Font of Inspiration",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Expertise",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Bardic Inspiration (d8)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Song of Rest (d10)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "13"
+            },
+            {
+                "name": " Magical Secrets",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Expertise",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Bardic Inspiration (d12)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "15"
+            },
+            {
+                "name": " Song of Rest (d6)",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Magical Secrets",
+                "class_name_origin": "Bard",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            }
+        ]
+    },
     {
         "name": "Sorcerer",
         "source_name": "PHB",
@@ -258,77 +358,154 @@
         "prof_3": null,
         "prof_4": null,
         "spellProgression": "2,3,4,5,6,7,8,9,10,11,12,12,13,13,14,14,15,15,15,15",
-        "spellAbility": "cha"    },
-    {
-        "name": "Rogue",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Wizard",
-        "source_name": "PHB",
-        "hit_die": "6",
-        "prof_1": "int",
-        "prof_2": "wis",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "int"    },
-    {
-        "name": "Artificer",
-        "source_name": "TCE",
-        "hit_die": "8",
-        "prof_1": "con",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "int"    },
-    {
-        "name": "Ranger",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "dex",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "0,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
-        "spellAbility": "wis"    },
-    {
-        "name": "Artificer",
-        "source_name": "TCE",
-        "hit_die": "8",
-        "prof_1": "con",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "int"    },
-    {
-        "name": "Fighter",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "str",
-        "prof_2": "con",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Bard",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "4,5,6,7,8,9,10,11,12,14,15,15,16,18,19,19,20,22,22,22",
-        "spellAbility": "cha"    },
+        "spellAbility": "cha",
+        "armorProf": "no data",
+        "weaponProf": "{@item dagger|phb|daggers},{@item dart|phb|darts},{@item sling|phb|slings},{@item quarterstaff|phb|quarterstaffs},{@item light crossbow|phb|light crossbows}",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "arcana,deception,insight,intimidation,persuasion,religion",
+        "startEquip": "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb},(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb},Two {@item dagger|phb|daggers}",
+        "ClassTraits": [
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Spell Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Metamagic Options",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Metamagic",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Metamagic",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Sorcerous Restoration",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Magical Guidance",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Metamagic",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Font of Magic Options",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Font of Magic",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Sorcerous Versatility",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Metamagic Options",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": "Spellcasting",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Sorcerer",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            }
+        ]
+    },
     {
         "name": "Spellcaster Sidekick",
         "source_name": "TCE",
@@ -338,97 +515,88 @@
         "prof_3": null,
         "prof_4": null,
         "spellProgression": "1,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
-        "spellAbility": null    },
-    {
-        "name": "Artificer",
-        "source_name": "TCE",
-        "hit_die": "8",
-        "prof_1": "con",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "int"    },
-    {
-        "name": "Barbarian",
-        "source_name": "PHB",
-        "hit_die": "12",
-        "prof_1": "str",
-        "prof_2": "con",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Druid",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "int",
-        "prof_2": "wis",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
-    {
-        "name": "Sorcerer",
-        "source_name": "PHB",
-        "hit_die": "6",
-        "prof_1": "con",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "2,3,4,5,6,7,8,9,10,11,12,12,13,13,14,14,15,15,15,15",
-        "spellAbility": "cha"    },
-    {
-        "name": "Warlock",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "wis",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "2,3,4,5,6,7,8,9,10,10,11,11,12,12,13,13,14,14,15,15",
-        "spellAbility": "cha"    },
-    {
-        "name": "Warrior Sidekick",
-        "source_name": "TCE",
-        "hit_die": null,
-        "prof_1": null,
-        "prof_2": null,
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Bard",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "dex",
-        "prof_2": "cha",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": "4,5,6,7,8,9,10,11,12,14,15,15,16,18,19,19,20,22,22,22",
-        "spellAbility": "cha"    },
-    {
-        "name": "Artificer",
-        "source_name": "TCE",
-        "hit_die": "8",
-        "prof_1": "con",
-        "prof_2": "int",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "int"    },
-    {
-        "name": "Barbarian",
-        "source_name": "PHB",
-        "hit_die": "12",
-        "prof_1": "str",
-        "prof_2": "con",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
+        "spellAbility": null,
+        "armorProf": "no data",
+        "weaponProf": "no data",
+        "toolsProf": "no data",
+        "skillProfNum": null,
+        "skillProf": null,
+        "startEquip": null,
+        "ClassTraits": [
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "18"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "4"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": null
+            },
+            {
+                "name": " Potent Cantrips",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "6"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "16"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "12"
+            },
+            {
+                "name": " Focused Casting",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "20"
+            },
+            {
+                "name": "Sidekick Class",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Bonus Proficiencies",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Empowered Spells",
+                "class_name_origin": "Spellcaster Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "14"
+            }
+        ]
+    },
     {
         "name": "Cleric",
         "source_name": "PHB",
@@ -437,8 +605,155 @@
         "prof_2": "cha",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "wis"    },
+        "spellProgression": "no data",
+        "spellAbility": "wis",
+        "armorProf": "light,medium,{@item shield|phb|shields}",
+        "weaponProf": "simple",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "history,insight,medicine,persuasion,religion",
+        "startEquip": "(a) a {@item mace|phb} or (b) a {@item warhammer|phb} (if proficient),(a) {@item scale mail|phb}, (b) {@item leather armor|phb}, or (c) {@item chain mail|phb} (if proficient),(a) a {@item light crossbow|phb} and {@item Crossbow Bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb},A {@item shield|phb} and a {@item holy symbol|phb}",
+        "ClassTraits": [
+            {
+                "name": " Destroy Undead (CR 4)",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Destroy Undead (CR 1)",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Cantrip Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Divine Intervention",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Cantrip Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Destroy Undead (CR 1/2)",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Destroy Undead (CR 3)",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Divine Intervention Improvement",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Channel Divinity: Harness Divine Power",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Destroy Undead (CR 2)",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "11"
+            },
+            {
+                "name": "Spellcasting",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Channel Divinity: Harness Divine Power",
+                "class_name_origin": "Cleric",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            }
+        ]
+    },
     {
         "name": "Barbarian",
         "source_name": "PHB",
@@ -447,8 +762,740 @@
         "prof_2": "con",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
+        "spellProgression": "no data",
+        "spellAbility": null,
+        "armorProf": "light,medium,{@item shield|phb|shields}",
+        "weaponProf": "simple,martial",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "animal handling,athletics,intimidation,nature,perception,survival",
+        "startEquip": "(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand},(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}",
+        "ClassTraits": [
+            {
+                "name": " Extra Attack",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Instinctive Pounce",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "7"
+            },
+            {
+                "name": " Brutal Critical (3 dice)",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Persistent Rage",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "15"
+            },
+            {
+                "name": " Primal Champion",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Unarmored Defense",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Primal Knowledge",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Reckless Attack",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Danger Sense",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Brutal Critical (2 dice)",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "13"
+            },
+            {
+                "name": " Survival Instincts",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Fast Movement",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Feral Instinct",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "7"
+            },
+            {
+                "name": " Indomitable Might",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Brutal Critical (1 die)",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "9"
+            },
+            {
+                "name": " Relentless Rage",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "11"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": "Rage",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Instinctive Pounce",
+                "class_name_origin": "Barbarian",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            }
+        ]
+    },
+    {
+        "name": "Monk",
+        "source_name": "PHB",
+        "hit_die": "8",
+        "prof_1": "str",
+        "prof_2": "dex",
+        "prof_3": null,
+        "prof_4": null,
+        "spellProgression": "no data",
+        "spellAbility": null,
+        "armorProf": "no data",
+        "weaponProf": "simple,{@item shortsword|phb|shortswords}",
+        "toolsProf": "any one type of {@item artisan's tools|PHB} or any one {@item musical instrument|PHB} of your choice",
+        "skillProfNum": "2",
+        "skillProf": "acrobatics,athletics,history,insight,religion,stealth",
+        "startEquip": "(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb},10 {@item dart|phb|darts}",
+        "ClassTraits": [
+            {
+                "name": " Monk Weapons",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Timeless Body",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "15"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Ki",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Dedicated Weapon",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Quickened Healing",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Deflect Missiles",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ki-Fueled Strike",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Tongue of the Sun and Moon",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "13"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Extra Attack",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Ki-Empowered Strikes",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Slow Fall",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ki Features",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Martial Arts",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Empty Body",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Unarmored Movement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Stunning Strike",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Diamond Soul",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Focused Aim",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Stillness of Mind",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "7"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Unarmored Movement improvement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "9"
+            },
+            {
+                "name": "Unarmored Defense",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Ki-Fueled Attack",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Perfect Self",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Evasion",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "7"
+            },
+            {
+                "name": " Purity of Body",
+                "class_name_origin": "Monk",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            }
+        ]
+    },
+    {
+        "name": "Expert Sidekick",
+        "source_name": "TCE",
+        "hit_die": null,
+        "prof_1": null,
+        "prof_2": null,
+        "prof_3": null,
+        "prof_4": null,
+        "spellProgression": "no data",
+        "spellAbility": null,
+        "armorProf": "no data",
+        "weaponProf": "no data",
+        "toolsProf": "no data",
+        "skillProfNum": null,
+        "skillProf": null,
+        "startEquip": null,
+        "ClassTraits": [
+            {
+                "name": " Reliable Talent",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "14"
+            },
+            {
+                "name": "Sidekick Class",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "16"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": null
+            },
+            {
+                "name": " Bonus Proficiencies",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Inspiring Help",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "11"
+            },
+            {
+                "name": " Evasion",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "7"
+            },
+            {
+                "name": " Sharp Mind",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "18"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "4"
+            },
+            {
+                "name": " Expertise",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "3"
+            },
+            {
+                "name": " Cunning Action",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "2"
+            },
+            {
+                "name": " Helpful",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "12"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "10"
+            },
+            {
+                "name": " Coordinated Strike",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "6"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "19"
+            },
+            {
+                "name": " Inspiring Help Improvement",
+                "class_name_origin": "Expert Sidekick",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "20"
+            }
+        ]
+    },
+    {
+        "name": "Fighter",
+        "source_name": "PHB",
+        "hit_die": "10",
+        "prof_1": "str",
+        "prof_2": "con",
+        "prof_3": null,
+        "prof_4": null,
+        "spellProgression": "no data",
+        "spellAbility": null,
+        "armorProf": "light,medium,heavy,{@item shield|phb|shields}",
+        "weaponProf": "simple,martial",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "acrobatics,animal handling,athletics,history,insight,intimidation,perception,survival",
+        "startEquip": "(a) {@item chain mail|phb} or (b) {@item leather armor|phb}, {@item longbow|phb}, and {@item arrows (20)|phb|20 arrows},(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon},(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) two {@item handaxe|phb|handaxes},(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+        "ClassTraits": [
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Indomitable (two uses)",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "13"
+            },
+            {
+                "name": " Action Surge (two uses)",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Extra Attack (2)",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "11"
+            },
+            {
+                "name": " Martial Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Indomitable (three uses)",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Maneuver Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Extra Attack",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": "Fighting Style",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Second Wind",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Extra Attack (3)",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Action Surge",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Indomitable",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "9"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Martial Versatility",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Fighter",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            }
+        ]
+    },
     {
         "name": "Paladin",
         "source_name": "PHB",
@@ -457,28 +1504,348 @@
         "prof_2": "cha",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "cha"    },
+        "spellProgression": "no data",
+        "spellAbility": "cha",
+        "armorProf": "light,medium,heavy,{@item shield|phb|shields}",
+        "weaponProf": "simple,martial",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "athletics,insight,intimidation,medicine,persuasion,religion",
+        "startEquip": "(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon},(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand},(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb},{@item Chain mail|phb} and a {@item holy symbol|phb}",
+        "ClassTraits": [
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Extra Attack",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Martial Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Cleansing Touch",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": "Divine Sense",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Divine Smite",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Improved Divine Smite",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "11"
+            },
+            {
+                "name": " Martial Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Fighting Style",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Aura of Protection",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Divine Health",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Lay on Hands",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Aura improvements",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Aura of Courage",
+                "class_name_origin": "Paladin",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            }
+        ]
+    },
     {
-        "name": "Monk",
+        "name": "Rogue",
         "source_name": "PHB",
         "hit_die": "8",
-        "prof_1": "str",
-        "prof_2": "dex",
+        "prof_1": "dex",
+        "prof_2": "int",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
-    {
-        "name": "Monk",
-        "source_name": "PHB",
-        "hit_die": "8",
-        "prof_1": "str",
-        "prof_2": "dex",
-        "prof_3": null,
-        "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
+        "spellProgression": "no data",
+        "spellAbility": null,
+        "armorProf": "light",
+        "weaponProf": "simple,{@item hand crossbow|phb|hand crossbows},{@item longsword|phb|longswords},{@item rapier|phb|rapiers},{@item shortsword|phb|shortswords}",
+        "toolsProf": "{@item thieves' tools|PHB}",
+        "skillProfNum": "4",
+        "skillProf": "acrobatics,athletics,deception,insight,intimidation,investigation,perception,performance,persuasion,sleight of hand,stealth",
+        "startEquip": "(a) a {@item rapier|phb} or (b) a {@item shortsword|phb},(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb},(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb},{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}",
+        "ClassTraits": [
+            {
+                "name": " Cunning Action: Aim",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Slippery Mind",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "15"
+            },
+            {
+                "name": " Reliable Talent",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "11"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Thieves' Cant",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Steady Aim",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Cunning Action",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Evasion",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "7"
+            },
+            {
+                "name": " Expertise",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Blindsense",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Uncanny Dodge",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Sneak Attack",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Elusive",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Stroke of Luck",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": "Expertise",
+                "class_name_origin": "Rogue",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            }
+        ]
+    },
     {
         "name": "Warlock",
         "source_name": "PHB",
@@ -488,35 +1855,834 @@
         "prof_3": null,
         "prof_4": null,
         "spellProgression": "2,3,4,5,6,7,8,9,10,10,11,11,12,12,13,13,14,14,15,15",
-        "spellAbility": "cha"    },
+        "spellAbility": "cha",
+        "armorProf": "light",
+        "weaponProf": "simple",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "arcana,deception,history,intimidation,investigation,nature,religion",
+        "startEquip": "(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb},(a) a {@item scholar's pack|phb} or (b) a {@item dungeoneer's pack|phb},{@item Leather armor|phb}, any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}, and two {@item dagger|phb|daggers}",
+        "ClassTraits": [
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Mystic Arcanum (9th level)",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "17"
+            },
+            {
+                "name": " Spell Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Mystic Arcanum (7th level)",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "13"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Mystic Arcanum (6th level)",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "11"
+            },
+            {
+                "name": " Mystic Arcanum (8th level)",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "15"
+            },
+            {
+                "name": "Pact Magic",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Eldritch Versatility",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Eldritch Master",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Eldritch Invocations",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Pact Boon",
+                "class_name_origin": "Warlock",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            }
+        ]
+    },
     {
-        "name": "Paladin",
-        "source_name": "PHB",
-        "hit_die": "10",
-        "prof_1": "wis",
-        "prof_2": "cha",
+        "name": "Artificer",
+        "source_name": "TCE",
+        "hit_die": "8",
+        "prof_1": "con",
+        "prof_2": "int",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": "cha"    },
+        "spellProgression": "no data",
+        "spellAbility": "int",
+        "armorProf": "light,medium,{@item shield|phb|shields}",
+        "weaponProf": "simple,[object Object]",
+        "toolsProf": "{@item thieves' tools|PHB},{@item tinker's tools|PHB},one type of {@item artisan's tools|PHB} of your choice",
+        "skillProfNum": "2",
+        "skillProf": "arcana,history,investigation,medicine,nature,perception,sleight of hand",
+        "startEquip": "any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon} of your choice,a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts},(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb},{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}",
+        "ClassTraits": [
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "19"
+            },
+            {
+                "name": " Infuse Item",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "2"
+            },
+            {
+                "name": "Optional Rule: Firearm Proficiency",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Magic Item Adept",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "10"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "19"
+            },
+            {
+                "name": " Magic Item Master",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "18"
+            },
+            {
+                "name": " Spell-Storing Item",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "11"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "16"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "8"
+            },
+            {
+                "name": " Magic Item Savant",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "14"
+            },
+            {
+                "name": " Magical Tinkering",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "1"
+            },
+            {
+                "name": " Tool Expertise",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "6"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "12"
+            },
+            {
+                "name": " Soul of Artifice",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "20"
+            },
+            {
+                "name": " Flash of Genius",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "7"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "12"
+            },
+            {
+                "name": " The Right Tool for the Job",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "3"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "16"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": "4"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Artificer",
+                "source_name": "Tasha's Cauldron of Everything",
+                "level": null
+            }
+        ]
+    },
     {
-        "name": "Barbarian",
+        "name": "Wizard",
         "source_name": "PHB",
-        "hit_die": "12",
-        "prof_1": "str",
-        "prof_2": "con",
+        "hit_die": "6",
+        "prof_1": "int",
+        "prof_2": "wis",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    },
+        "spellProgression": "no data",
+        "spellAbility": "int",
+        "armorProf": "no data",
+        "weaponProf": "{@item dagger|phb|daggers},{@item dart|phb|darts},{@item sling|phb|slings},{@item quarterstaff|phb|quarterstaffs},{@item light crossbow|phb|light crossbows}",
+        "toolsProf": "no data",
+        "skillProfNum": "2",
+        "skillProf": "arcana,history,insight,investigation,medicine,religion",
+        "startEquip": "(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb},(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb},(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb},A {@item spellbook|phb}",
+        "ClassTraits": [
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Cantrip Versatility",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Cantrip Formulas",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Spell Mastery",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": "Arcane Recovery",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Signature Spells",
+                "class_name_origin": "Wizard",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            }
+        ]
+    },
     {
-        "name": "Monk",
+        "name": "Druid",
         "source_name": "PHB",
         "hit_die": "8",
+        "prof_1": "int",
+        "prof_2": "wis",
+        "prof_3": null,
+        "prof_4": null,
+        "spellProgression": "no data",
+        "spellAbility": "wis",
+        "armorProf": "light,medium,[object Object]",
+        "weaponProf": "{@item club|phb|clubs},{@item dagger|phb|daggers},{@item dart|phb|darts},{@item javelin|phb|javelins},{@item mace|phb|maces},{@item quarterstaff|phb|quarterstaffs},{@item scimitar|phb|scimitars},{@item sickle|phb|sickles},{@item sling|phb|slings},{@item spear|phb|spears}",
+        "toolsProf": "{@item Herbalism kit|PHB}",
+        "skillProfNum": "2",
+        "skillProf": "arcana,animal handling,insight,medicine,nature,perception,religion,survival",
+        "startEquip": "(a) a wooden {@item shield|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon},(a) a {@item scimitar|phb} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand},{@item Leather armor|phb}, an {@item explorer's pack|phb}, and a {@item druidic focus|phb}",
+        "ClassTraits": [
+            {
+                "name": " Wild Shape Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Wild Shape",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Archdruid",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Timeless Body",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Beast Spells",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Cantrip Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Wild Shape Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Wild Companion",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": "Druidic",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Wild Companion",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Cantrip Versatility",
+                "class_name_origin": "Druid",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            }
+        ]
+    },
+    {
+        "name": "Ranger",
+        "source_name": "PHB",
+        "hit_die": "10",
         "prof_1": "str",
         "prof_2": "dex",
         "prof_3": null,
         "prof_4": null,
-        "spellProgression": null,
-        "spellAbility": null    }
+        "spellProgression": "0,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11",
+        "spellAbility": "wis",
+        "armorProf": "light,medium,{@item shield|phb|shields}",
+        "weaponProf": "simple,martial",
+        "toolsProf": "no data",
+        "skillProfNum": "3",
+        "skillProf": "animal handling,athletics,insight,investigation,nature,perception,stealth,survival",
+        "startEquip": "(a) {@item scale mail|phb} or (b) {@item leather armor|phb},(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand},(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb},A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}",
+        "ClassTraits": [
+            {
+                "name": " Deft Explorer",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Deft Explorer Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": "Favored Enemy",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Spellcasting Focus",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "12"
+            },
+            {
+                "name": " Vanish",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Martial Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Land's Stride",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Extra Attack",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "5"
+            },
+            {
+                "name": " Martial Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Natural Explorer improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Primal Awareness",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Deft Explorer",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Spell Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Favored Foe",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Feral Senses",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "18"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "16"
+            },
+            {
+                "name": " Spellcasting Focus",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Fade Away",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " ",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": null
+            },
+            {
+                "name": " Favored Enemy improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "14"
+            },
+            {
+                "name": " Fighting Style",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            },
+            {
+                "name": " Natural Explorer",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Favored Enemy and Natural Explorer improvements",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Nature's Veil",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "4"
+            },
+            {
+                "name": " Proficiency Versatility",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "8"
+            },
+            {
+                "name": " Favored Foe",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "1"
+            },
+            {
+                "name": " Primeval Awareness",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Deft Explorer Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "6"
+            },
+            {
+                "name": " Foe Slayer",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "20"
+            },
+            {
+                "name": " Ability Score Improvement",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "19"
+            },
+            {
+                "name": " Primal Awareness",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "3"
+            },
+            {
+                "name": " Hide in Plain Sight",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "10"
+            },
+            {
+                "name": " Spellcasting",
+                "class_name_origin": "Ranger",
+                "source_name": "Player's Handbook",
+                "level": "2"
+            }
+        ]
+    }
 ]

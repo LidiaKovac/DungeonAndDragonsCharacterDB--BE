@@ -9,12 +9,14 @@ const PORT = process.env.PORT || 3001
 const app = express()
 
 import passive_data from "./services/dnd_data/index"
+import characterRoute from "./services/characters"
 
 app.use(express.json())
 app.use(cors())
 app.use(require("helmet")())
 
 app.use("/passive", passive_data)
+app.use("/api/character", characterRoute)
 
 sequelize.sync({ force: false, logging: false, alter: true }).then((result: any) => {
     app.listen(PORT, () => {

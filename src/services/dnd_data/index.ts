@@ -1,23 +1,26 @@
 //GENERAL
 import { Router } from "express";
+import { Op } from "sequelize";
 const passive_data_router = Router()
 
 import { Request, Response, NextFunction } from "express";
 import Classes from "../../db/models/classes";
+import ClassTrait from "../../db/models/class_feat";
 import Race from "../../db/models/races";
 import RacialTrait from "../../db/models/racial_feat";
 import Source from "../../db/models/sources";
+import Feats from "../../db/models/feats";
 
 
 passive_data_router.get(
     "/sources",
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const todos = await Source.findAll();
-            console.log(todos);
+            const sources = await Source.findAll();
 
-            if (todos.length > 0 && todos !== null) {
-                res.status(200).send(todos);
+
+            if (sources.length > 0 && sources !== null) {
+                res.status(200).send(sources);
             } else res.sendStatus(500)
         } catch (e) {
             next(e);
@@ -25,18 +28,21 @@ passive_data_router.get(
     }
 );
 
+// SOURCE BY ID
 passive_data_router.get(
     "/sources/:id",
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const todos = await Source.findOne({ where: { shorthand: req.params.id } });
-            if (todos !== null) res.send(todos)
+            const source = await Source.findOne({ where: { shorthand: req.params.id } });
+            if (source !== null) res.send(source)
             else res.send(204)
         } catch (e) {
             next(e);
         }
     }
 );
+
+// CREATE SOURCES
 
 passive_data_router.post(
     "/sources",
@@ -47,10 +53,10 @@ passive_data_router.post(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
 
-            const classes = await Source.create(req.body);
-            res.send(classes);
+
+            const sources = await Source.create(req.body);
+            res.send(sources);
         } catch (e) {
             console.log(e);
 
@@ -60,7 +66,7 @@ passive_data_router.post(
 );
 
 passive_data_router.post(
-    "/sources/bulk",
+    "/source/bulk",
 
     async (
         req: Request,
@@ -68,12 +74,12 @@ passive_data_router.post(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
 
-            for (const el of req.body.elements) {
-                const classes = await Source.create(el);
+            for await (const el of req.body) {
+                const sources = await Source.create(el);
+
             }
-            res.send(201);
+            res.sendStatus(201);
         } catch (e) {
             console.log(e);
 
@@ -82,15 +88,19 @@ passive_data_router.post(
     }
 );
 
+
+
 passive_data_router.get(
     "/race",
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const todos = await Race.findAll();
-            console.log(todos);
+            const races = await Race.findAll({
+                include: [{ model: RacialTrait }]
+            });
 
-            if (todos.length > 0) {
-                res.status(200).send(todos);
+
+            if (races.length > 0) {
+                res.status(200).send(races);
             } else res.sendStatus(204);
         } catch (e) {
             next(e);
@@ -102,21 +112,60 @@ passive_data_router.get(
     "/race/:query",
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
-            const todos = await Race.findOne({
+            const race = await Race.findOne({
                 where: {
                     name: req.params.query
-                }
+                },
+                include: [{ model: RacialTrait }]
             });
-            console.log(todos);
 
-            if (todos !== null) {
-                res.status(200).send(todos);
+
+            if (race !== null) {
+                res.status(200).send(race);
             } else res.sendStatus(204);
         } catch (e) {
             next(e);
         }
     }
 );
+
+passive_data_router.post(
+    "/race/bulk",
+
+    async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<void> => {
+        try {
+            for (const race of req.body) {
+                const source = await Source.findOne({
+                    where: {
+                        shorthand: race.source_name
+                    }, plain: true
+                })
+                let newRace = await Race.create({ ...race, source_name: source!.shorthand });
+                for (const entry of race.racialTraits) {
+
+
+                    let newRaceTrait = await RacialTrait.create({
+                        name: entry.name || "Note",
+                        text: entry.entries?.join(",") || "",
+                        source_name: newRace?.source_name,
+                        race_name: newRace?.name,
+                        RaceId: newRace?.id
+                    })
+                }
+            }
+            res.sendStatus(201);
+        } catch (e) {
+            console.log(e);
+
+            next(e);
+        }
+    }
+);
+
 
 passive_data_router.post(
     "/race",
@@ -127,13 +176,13 @@ passive_data_router.post(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
+
             const source = await Source.findOne({
                 where: {
                     shorthand: req.body.source_name
                 }, plain: true
             })
-            console.log(source)
+
             const race = await Race.create({ ...req.body, source_name: source!.shorthand });
             res.send(race);
         } catch (e) {
@@ -144,10 +193,79 @@ passive_data_router.post(
     }
 );
 
-passive_data_router.get("/class", async(req:Request, res:Response, next:NextFunction)=> {
+passive_data_router.post(
+    "/feat",
+
+    async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<void> => {
+        try {
+
+            const source = await Source.findOne({
+                where: {
+                    shorthand: req.body.source_name
+                }, plain: true
+            })
+            if (source !== null) {
+                const feat = await Feats.create({ ...req.body, SourceId: source!.id });
+                res.send(feat);
+            } else res.sendStatus(204)
+        } catch (e) {
+            console.log(e);
+
+            next(e);
+        }
+    }
+);
+
+passive_data_router.get(
+    "/feat",
+
+    async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<void> => {
+        try {
+
+            const feat = await Feats.findAll()
+            res.send(feat)
+        } catch (e) {
+            console.log(e);
+
+            next(e);
+        }
+    }
+);
+
+passive_data_router.delete(
+    "/feat/all",
+
+    async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<void> => {
+        try {
+
+            const feat = await Feats.truncate()
+            res.send(feat)
+        } catch (e) {
+            console.log(e);
+
+            next(e);
+        }
+    }
+);
+
+passive_data_router.get("/class", async (req: Request, res: Response, next: NextFunction) => {
     try {
-    let traits = await Classes.findAll()
-    res.send(traits) 
+        let classes = await Classes.findAll({
+            include: [{ model: ClassTrait }]
+        })
+        res.send(classes)
     } catch (error) {
         next(error)
     }
@@ -162,16 +280,38 @@ passive_data_router.post(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
+
             const source = await Source.findOne({
                 where: {
                     shorthand: req.body.source_name
                 }, plain: true
             })
-            if(source !== null) {
 
-                const race = await Classes.create({ ...req.body, SourceId: source!.id });
-                res.send(race);
+
+            if (source !== null) {
+                const newClass = await Classes.create({ ...req.body, SourceId: source!.id });
+                let allFeats = req.body.classFeatures.split(",")
+                for (const feat of allFeats) {
+                    let featSource = await Source.findOne({
+                        where: {
+                            shorthand: feat.split("|")[2] || req.body.source_name
+                        }, plain: true
+                    })
+
+
+                    await ClassTrait.create({
+                        name: feat.split(["|"])[0],
+                        ClassId: newClass.id,
+                        class_name_origin: newClass.name,
+                        SourceId: featSource !== null ? featSource?.id : "",
+                        source_name: featSource !== null ? featSource?.name || "no data" : "no data",
+                        level: feat.split(["|"])[3]
+                    })
+
+                }
+
+
+                res.send(newClass);
             } else res.sendStatus(204)
         } catch (e) {
             console.log(e);
@@ -181,21 +321,23 @@ passive_data_router.post(
     }
 );
 
-passive_data_router.get("/raceTrait", async(req:Request, res:Response, next:NextFunction)=> {
+passive_data_router.get("/raceTrait", async (req: Request, res: Response, next: NextFunction) => {
     try {
-    let traits = await RacialTrait.findAll()
-    res.send(traits) 
+        let traits = await RacialTrait.findAll()
+        res.send(traits)
     } catch (error) {
         next(error)
     }
 })
 
-passive_data_router.delete("/raceTrait", async(req:Request, res:Response, next:NextFunction)=> {
+passive_data_router.delete("/raceTrait", async (req: Request, res: Response, next: NextFunction) => {
     try {
-    let traits = await RacialTrait.destroy({where: {
-        race_name: null
-    }})
-    res.send(traits) 
+        let traits = await RacialTrait.destroy({
+            where: {
+                race_name: null
+            }
+        })
+        res.send(traits)
     } catch (error) {
         next(error)
     }
@@ -210,14 +352,14 @@ passive_data_router.post(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
+
             const source = await Source.findOne({
                 where: {
                     shorthand: req.body.source_name
                 }, plain: true
             })
-            const foundRace = await Race.findByPk(req.body.RaceId) 
-            console.log(source)
+            const foundRace = await Race.findByPk(req.body.RaceId)
+
             if (source === null && foundRace !== null) {
                 res.sendStatus(204)
             } else {
@@ -233,8 +375,11 @@ passive_data_router.post(
     }
 );
 
+
+
+
 passive_data_router.delete(
-    "/race/deleteAllNullFK",
+    "/race/deleteAll",
 
     async (
         req: Request,
@@ -242,14 +387,9 @@ passive_data_router.delete(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
-
-            const race = await Race.destroy({
-                where: {
-                    SourceId: null
-                }
-            });
-            res.send(race);
+            Race.drop()
+            RacialTrait.drop()
+            res.sendStatus(204);
         } catch (e) {
             console.log(e);
 
@@ -257,8 +397,10 @@ passive_data_router.delete(
         }
     }
 );
+
+
 passive_data_router.delete(
-    "/race/:id",
+    "/class",
 
     async (
         req: Request,
@@ -266,14 +408,39 @@ passive_data_router.delete(
         next: NextFunction
     ): Promise<void> => {
         try {
-            console.log(req.body);
 
-            const race = await Race.destroy({
+
+            const race = await Classes.destroy({
                 where: {
-                    id: req.params.id
+                    CharId: null
                 }
             });
-            res.send(race);
+            res.sendStatus(204);
+        } catch (e) {
+            console.log(e);
+
+            next(e);
+        }
+    }
+);
+
+passive_data_router.delete(
+    "/race/:query",
+
+    async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<void> => {
+        try {
+            //note: truncate deletes everything
+
+            const race = await Race.truncate({
+                where: {
+                    name: req.params.query
+                }, cascade: true
+            });
+            res.sendStatus(204);
         } catch (e) {
             console.log(e);
 

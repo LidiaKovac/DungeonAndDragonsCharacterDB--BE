@@ -3,6 +3,9 @@ window.onload = async () => {
 	let { race: races } = await raceRes.json();
 	console.log(races);
 	for await (const race of races) {
+		if(race.traitTags && (race.traitTags.includes("NPC Race") && race.traitTags.length == 1)) {
+			continue
+		}
 		let res = await fetch(
 			"http://localhost:3001/passive/sources/" + race.source
 		);
@@ -65,5 +68,58 @@ window.onload = async () => {
 			});
 		}
 	}
+};
+
+
+
+window.onload = async () => {
+	let raceRes = await fetch("./class/index.json");
+	let classes = await raceRes.json();
+    for (const sinClass in classes) {
+        if (Object.hasOwnProperty.call(classes, sinClass)) {
+            const element = classes[sinClass];
+            let res = await fetch(`./class/${element}`)
+            let allClass = await res.json()
+            let singleClass = allClass.class
+            if (singleClass) {
+
+            for (const classData of singleClass) {
+                
+            let sendData = {
+                name: classData.name,
+                source_name: classData.source,
+                hit_die: classData.hd?.faces,
+                spellProgression: classData?.spellsKnownProgression?.join(",") || "no data",
+                spellAbility: classData?.spellcastingAbility,
+                armorProf: classData?.startingProficiencies?.armor?.join(",") || "no data",
+                weaponProf: classData.startingProficiencies?.weapons?.join(",") || "no data",
+                toolsProf: classData.startingProficiencies?.tools?.join(",") || "no data",
+                skillProfNum: classData.startingProficiencies?.skills && (classData.startingProficiencies.skills[0]?.choose?.count || classData.startingProficiencies.skills[0]?.any),
+                skillProf: classData.startingProficiencies?.skills && (classData.startingProficiencies.skills[0]?.choose?.from?.join(",") || "any"),
+                classFeatures: "",
+                startEquip: classData.startingEquipment?.default?.join(",")
+            }
+            for (let i = 0; i < classData?.proficiency?.length; i++) {
+                let key = `prof_${i+1}`
+                sendData[key] = classData.proficiency[i]
+            }
+            for (let i = 0; i < classData.classFeatures.length; i++) {
+                console.log(classData.classFeatures[i]);
+                const element = classData.classFeatures[i];
+                if (typeof element == "string") {
+                    sendData.classFeatures += element + ", "
+                }
+            }
+            await fetch("http://localhost:3001/passive/class", {
+				method: "POST",
+				body: JSON.stringify(sendData),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
+        }
+    }}
+    }
+	
 };
 

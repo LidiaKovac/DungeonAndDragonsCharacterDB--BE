@@ -4,7 +4,7 @@ class Classes extends Model {
 
     id!: number
     name!: string
-    
+
     source_name!: string
     hit_die!: number
     prof_1!: string
@@ -13,6 +13,12 @@ class Classes extends Model {
     prof_4!: string
     spellProgression!: string
     spellAbility!: string
+    armorProf!: string
+    weaponProf!: string
+    toolsProf!: string
+    skillProfNum!: number
+    skillProf!: string
+    startEquip!: string
 
     static initialize(sequelize: Sequelize) {
         this.init(
@@ -26,7 +32,6 @@ class Classes extends Model {
                     type: STRING(100),
                     allowNull: false,
                 },
-                
                 source_name: {
                     type: STRING(100)
                 },
@@ -38,10 +43,10 @@ class Classes extends Model {
                 },
                 prof_2: {
                     type: STRING(3)
-                }, 
+                },
                 prof_3: {
                     type: STRING(3)
-                }, 
+                },
                 prof_4: {
                     type: STRING(3)
                 },
@@ -50,9 +55,26 @@ class Classes extends Model {
                 },
                 spellAbility: {
                     type: STRING(3)
-                }
-
-
+                },
+                armorProf: {
+                    type: STRING(1000)
+                },
+                weaponProf: {
+                    type: STRING(1000)
+                },
+                toolsProf: {
+                    type: STRING(1000)
+                },
+                skillProfNum: { 
+                    type: INTEGER 
+                },
+                skillProf: {
+                    type: STRING(1000)
+                },
+                startEquip: {
+                    type: STRING(1000)
+                },
+                
             },
             {
                 sequelize,
