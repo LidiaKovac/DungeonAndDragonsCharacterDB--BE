@@ -321,6 +321,72 @@ passive_data_router.post(
     }
 );
 
+
+passive_data_router.post(
+    "/subclass",
+
+    async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<void> => {
+        try {
+
+            const source = await Source.findOne({
+                where: {
+                    shorthand: req.body.source_name
+                }, plain: true
+            })
+            let classes = await Classes.findOne({
+                where: {
+                    name: req.body.class_name
+                }, plain: true
+            })
+            
+            if(classes === null) {
+                console.log(classes);
+                classes = await Classes.findOne({
+                    where: {
+                        name: req.body.class_name.split(" ")[0]
+                    }, plain: true
+                })
+            }
+
+            if (source !== null && classes !== null) {
+                const newClass = await Classes.create({ ...req.body, SourceId: source!.id, parent_class: classes!.id });
+                let allFeats = req.body.classFeatures.split(",")
+                for (const feat of allFeats) {
+                    let featSource = await Source.findOne({
+                        where: {
+                            shorthand: feat.split("|")[2] || req.body.source_name
+                        }, plain: true, logging: false
+                    })
+
+
+                    await ClassTrait.create({
+                        name: feat.split(["|"])[0],
+                        ClassId: newClass.id,
+                        class_name_origin: newClass.name,
+                        SourceId: featSource !== null ? featSource?.id : null,
+                        source_name: featSource !== null ? featSource?.name || "no data" : "no data",
+                        level: feat.split(["|"])[feat.split(["|"]).length - 1] === " " ? 0 : 0
+                    }, {logging: false})
+
+                }
+
+
+                res.send(newClass);
+            } else res.sendStatus(204)
+        } catch (e) {
+            console.log(e);
+
+            next(e);
+        }
+    }
+);
+
+
+
 passive_data_router.get("/raceTrait", async (req: Request, res: Response, next: NextFunction) => {
     try {
         let traits = await RacialTrait.findAll()
@@ -412,7 +478,7 @@ passive_data_router.delete(
 
             const race = await Classes.destroy({
                 where: {
-                    CharId: null
+                    type: "subclass"
                 }
             });
             res.sendStatus(204);

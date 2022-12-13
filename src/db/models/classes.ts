@@ -4,7 +4,7 @@ class Classes extends Model {
 
     id!: number
     name!: string
-
+    parent_class!: string
     source_name!: string
     hit_die!: number
     prof_1!: string
@@ -27,6 +27,11 @@ class Classes extends Model {
                     primaryKey: true,
                     type: UUID,
                     defaultValue: UUIDV4
+                },
+                type: {
+                    type: STRING(100),
+                    defaultValue: "class",
+                    allowNull: false
                 },
                 name: {
                     type: STRING(100),

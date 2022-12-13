@@ -30,7 +30,7 @@ characterRoute.post(
 	"/",
 	async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	  try {
-		
+		res.send(req.body)
 	  } catch (e) {
 		next(e);
 	  }
