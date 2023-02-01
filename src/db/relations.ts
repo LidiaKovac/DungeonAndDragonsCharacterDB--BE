@@ -8,11 +8,11 @@ import Source from "./models/sources"
 import User from "./models/user"
 
 export const initRelations = () => {
-    Character.hasMany(Classes) //each character can have many classes (looking at you, multi classing)
-    Classes.belongsToMany(Character, {through: "Chars_Class"}) //each class can be assigned to multiple chars
+    Character.hasMany(Classes, {foreignKey: "class_id"}) //each character can have many classes (looking at you, multi classing)
+    Classes.belongsToMany(Character, {through: "Chars_Class", foreignKey: "class_id"}) //each class can be assigned to multiple chars
     
-    Character.hasOne(Race)
-    Race.belongsToMany(Character, {through: "Chars_Race_2"})
+    Character.hasOne(Race, {foreignKey: "race_id"})
+    Race.belongsToMany(Character, {through: "Chars_Race_2", foreignKey: "race_id"})
 
     Character.hasOne(User)
     User.hasMany(Character)

@@ -1,12 +1,15 @@
+import { ARRAY } from "sequelize";
+import { JSON } from "sequelize";
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
+import Race from "./races";
 
 class Character extends Model {
 
     id!: number;
     name!: string;
-    race_id!: number;
-    class_id!: number;
-    owner_id!: number;
+    race_id!: string;
+    class_id!: string;
+    // owner_id!: string;
     str!: number;
     cos!: number;
     dex!: number;
@@ -41,9 +44,15 @@ class Character extends Model {
                 class_id: {
                     type: UUID
                 },
-                owner_id: {
-                    type: UUID
+                race: {
+                    type: JSON
                 },
+                classes: {
+                    type: ARRAY(JSON)
+                },
+                // owner_id: {
+                //     type: UUID
+                // },
                 str: {
                     type: INTEGER
                 },
@@ -82,7 +91,7 @@ class Character extends Model {
                     allowNull: false,
                     defaultValue: 1
                 }
-                
+
             },
             {
                 sequelize,
