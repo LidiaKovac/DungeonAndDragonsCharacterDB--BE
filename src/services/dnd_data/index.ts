@@ -95,7 +95,8 @@ passive_data_router.get(
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
             const races = await Race.findAll({
-                include: [{ model: RacialTrait }]
+                include: [{ model: RacialTrait }],
+                order: [["name", "ASC"]]
             });
 
 
@@ -109,12 +110,12 @@ passive_data_router.get(
 );
 
 passive_data_router.get(
-    "/race/:query",
+    "/race/:id",
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
             const race = await Race.findOne({
                 where: {
-                    name: req.params.query
+                    id: req.params.id
                 },
                 include: [{ model: RacialTrait }]
             });
@@ -259,11 +260,41 @@ passive_data_router.delete(
         }
     }
 );
-
+// DOCS: 
+/* 
+    params: 
+        attributes: proprieta' da includere, separate da virgola
+        complete: true per includere i traits di classe
+*/
 passive_data_router.get("/class", async (req: Request, res: Response, next: NextFunction) => {
     try {
+        let {attributes, complete} = req.query as Express.ParsedQs
+        
         let classes = await Classes.findAll({
-            include: [{ model: ClassTrait }]
+            where: {
+                type: "class"
+            },
+            order: [["name", "ASC"]],
+            include: complete === "true" ? [{ model: ClassTrait }] : [], 
+            attributes: attributes!.split(",").concat("prof_1", "prof_2", "prof_3", "prof_4")
+        })
+        res.send(classes)
+    } catch (error) {
+        next(error)
+    }
+})
+
+passive_data_router.get("/class/:id", async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let {attributes, complete} = req.query as Express.ParsedQs
+        
+        let classes = await Classes.findOne({
+            where: {
+                id: req.params.id
+            },
+            order: [["name", "ASC"]],
+            include: complete === "true" ? [{ model: ClassTrait }] : [], 
+            attributes: attributes!.split(",").concat("prof_1", "prof_2", "prof_3", "prof_4")
         })
         res.send(classes)
     } catch (error) {

@@ -79,7 +79,6 @@ class Classes extends Model {
                 startEquip: {
                     type: STRING(1000)
                 },
-                
             },
             {
                 sequelize,

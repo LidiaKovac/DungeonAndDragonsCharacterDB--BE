@@ -7,9 +7,7 @@ class Character extends Model {
 
     id!: number;
     name!: string;
-    race_id!: string;
-    class_id!: string;
-    // owner_id!: string;
+
     str!: number;
     cos!: number;
     dex!: number;
@@ -22,6 +20,8 @@ class Character extends Model {
     ab_prof_4!: number
     hit_points!: number
     level!: number
+    addClass!: Function //this function will be created by Sequelize, we need to add it here so that TS will recognize it
+    addRace!: Function //this function will be created by Sequelize, we need to add it here so that TS will recognize it
 
     created!: Date;
     updated!: Date;
@@ -38,21 +38,7 @@ class Character extends Model {
                     type: STRING(100),
                     allowNull: false,
                 },
-                race_id: {
-                    type: UUID
-                },
-                class_id: {
-                    type: UUID
-                },
-                race: {
-                    type: JSON
-                },
-                classes: {
-                    type: ARRAY(JSON)
-                },
-                // owner_id: {
-                //     type: UUID
-                // },
+                
                 str: {
                     type: INTEGER
                 },
