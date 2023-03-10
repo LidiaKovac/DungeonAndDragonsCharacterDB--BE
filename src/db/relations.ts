@@ -14,7 +14,7 @@ export const initRelations = () => {
     Character.hasOne(Race)
     // Race.belongsToMany(Character, {through: "Chars_Race_2" })
 
-    Character.hasOne(User)
+    Character.belongsTo(User)
     User.hasMany(Character)
 
     Classes.belongsTo(Source)

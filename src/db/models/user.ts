@@ -1,3 +1,4 @@
+import { ENUM, EnumDataType, EnumDataTypeOptions } from "sequelize";
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
 
 class User extends Model {
@@ -6,7 +7,7 @@ class User extends Model {
     full_name!: string
     nickname!: string
     password!: string
-    access_token!: string
+    email!: string
 
 
     static initialize(sequelize: Sequelize) {
@@ -29,13 +30,17 @@ class User extends Model {
                     type: STRING(100),
                     allowNull: false,
                 },
-                access_token: {
+                
+                role: {
+                    type: STRING(1000),
+                    allowNull: true,
+                    defaultValue: "regular"
+                },
+                email: {
                     type: STRING(100),
                     allowNull: false,
-                },
-
-
-
+                    unique: true
+                }
             },
             {
                 sequelize,

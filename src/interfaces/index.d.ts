@@ -7,3 +7,5 @@ declare namespace Express {
 
     }
 }
+
+interface JwtPayload { full_name: string, email: string, nickname: string, iat?: number, exp?: number }

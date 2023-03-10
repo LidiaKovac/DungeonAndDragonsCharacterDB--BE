@@ -56,19 +56,19 @@ characterRoute.post(
 			for (const classId of req.body.classes) {
 				let classFound = await Classes.findByPk(classId)
 				const keysToCheck = ["prof_1", "prof_2", "prof_3", "prof_4"]
-				for (const key in classFound!.toJSON()) {
-					console.log(key);
+				// for (const key in classFound!.toJSON()) {
+				// 	console.log(key);
 
-					if (Object.prototype.hasOwnProperty.call(classFound?.toJSON(), key) && keysToCheck.includes(key)) {
-						const skill = classFound![key as keyof Classes] as string;
-						console.log(skill);
+				// 	if (Object.prototype.hasOwnProperty.call(classFound?.toJSON(), key) && keysToCheck.includes(key)) {
+				// 		const skill = classFound![key as keyof Classes] as string;
+				// 		console.log(skill);
 
-						await char.update({
-							[skill]: calculateProf(char.level as number)
-						})
-						await char.save()
-					}
-				}
+				// 		await char.update({
+				// 			[skill]: calculateProf(char.level as number)
+				// 		})
+				// 		await char.save()
+				// 	}
+				// }
 				char.addClass(classFound, { through: "ClassChar" })
 				console.log(char);
 

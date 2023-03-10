@@ -10,6 +10,7 @@ const app = express()
 
 import passive_data from "./services/dnd_data/index"
 import characterRoute from "./services/characters"
+import userRoute from "./services/users"
 
 app.use(express.json())
 app.use(cors())
@@ -17,6 +18,7 @@ app.use(require("helmet")())
 
 app.use("/passive", passive_data)
 app.use("/api/character", characterRoute)
+app.use("/api/user", userRoute)
 
 sequelize.sync({ force: false, logging: false, alter: true }).then((result: any) => {
     app.listen(PORT, () => {
@@ -24,8 +26,8 @@ sequelize.sync({ force: false, logging: false, alter: true }).then((result: any)
             "🌚🌝 Server is running on",
             PORT,
             " with these endpoints: ",
-            endpoints(app)
         );
+        console.table(endpoints(app))
     });
 });
 export default app
