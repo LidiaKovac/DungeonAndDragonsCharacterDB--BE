@@ -1,0 +1,392 @@
+[
+    {
+        "race_name": "Bugbear",
+        "name": "Age",
+        "source_name": "VGM",
+        "text": "Bugbears reach adulthood at age 16 and live up to 80 years."},
+    {
+        "race_name": "Bugbear",
+        "name": "Long-Limbed",
+        "source_name": "ERLW",
+        "text": "When you make a melee attack on your turn, your reach for it is 5 feet greater than normal."},
+    {
+        "race_name": "Bugbear",
+        "name": "Powerful Build",
+        "source_name": "ERLW",
+        "text": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."},
+    {
+        "race_name": "Aasimar",
+        "name": "Celestial Resistance",
+        "source_name": "MPMM",
+        "text": "You have resistance to necrotic damage and radiant damage."},
+    {
+        "race_name": "Aasimar",
+        "name": "Light Bearer",
+        "source_name": "VGM",
+        "text": "You know the {@spell light} cantrip. Charisma is your spellcasting ability for it."},
+    {
+        "race_name": "Bugbear",
+        "name": "Languages",
+        "source_name": "ERLW",
+        "text": "You can speak, read, and write Common and Goblin."},
+    {
+        "race_name": "Changeling",
+        "name": "Alignment",
+        "source_name": "ERLW",
+        "text": "Changelings tend toward pragmatic neutrality, and few changelings embrace evil."},
+    {
+        "race_name": "Aasimar",
+        "name": "Darkvision",
+        "source_name": "DMG",
+        "text": "Thanks to your celestial heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey."},
+    {
+        "race_name": "Bugbear",
+        "name": "Sneaky",
+        "source_name": "ERLW",
+        "text": "You are proficient in the {@skill Stealth} skill."},
+    {
+        "race_name": "Aasimar",
+        "name": "Celestial Resistance",
+        "source_name": "VGM",
+        "text": "You have resistance to necrotic damage and radiant damage."},
+    {
+        "race_name": "Bugbear",
+        "name": "Powerful Build",
+        "source_name": "VGM",
+        "text": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."},
+    {
+        "race_name": "Bugbear",
+        "name": "Age",
+        "source_name": "ERLW",
+        "text": "Bugbears reach adulthood at age 16 and live up to 80 years."},
+    {
+        "race_name": "Changeling",
+        "name": "Creature Type",
+        "source_name": "MPMM",
+        "text": "You are a Fey."},
+    {
+        "race_name": "Aarakocra",
+        "name": "Talons",
+        "source_name": "MPMM",
+        "text": "You have talons that you can use to make unarmed strikes. When you hit with them, the strike deals {@damage 1d6} + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike."},
+    {
+        "race_name": "Bugbear",
+        "name": "Fey Ancestry",
+        "source_name": "MPMM",
+        "text": "You have advantage on saving throws you make to avoid or end the {@condition charmed} condition on yourself."},
+    {
+        "race_name": "Bugbear",
+        "name": "Sneaky",
+        "source_name": "MPMM",
+        "text": "You are proficient in the {@skill Stealth} skill. In addition, without squeezing, you can move through and stop in a space large enough for a Small creature."},
+    {
+        "race_name": "Bugbear",
+        "name": "Long-Limbed",
+        "source_name": "MPMM",
+        "text": "When you make a melee attack on your turn, your reach for it is 5 feet greater than normal."},
+    {
+        "race_name": "Centaur",
+        "name": "Hooves",
+        "source_name": "MPMM",
+        "text": "You have hooves that you can use to make unarmed strikes. When you hit with them, the strike deals {@damage 1d6} + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike."},
+    {
+        "race_name": "Changeling",
+        "name": "Languages",
+        "source_name": "ERLW",
+        "text": "You can speak, read, and write Common and two other languages of your choice."},
+    {
+        "race_name": "Centaur",
+        "name": "Alignment",
+        "source_name": "GGR",
+        "text": "Centaurs are inclined toward neutrality. Those who join the Selesnya are more often neutral good, while those who join the Gruul are typically chaotic neutral."},
+    {
+        "race_name": "Aasimar",
+        "name": "Age",
+        "source_name": "VGM",
+        "text": "Aasimar mature at the same rate as humans, but they can live up to 160 years."},
+    {
+        "race_name": "Aarakocra",
+        "name": "Wind Caller",
+        "source_name": "MPMM",
+        "text": "Starting at 3rd level, you can cast the {@spell gust of wind} spell with this trait, without requiring a material component. Once you cast the spell with this trait, you can't do so again until you finish a long rest. You can also cast the spell using any spell slots you have of 2nd level or higher. Intelligence, Wisdom, or Charisma is your spellcasting ability for when you cast {@spell gust of wind} with this trait (choose when you select this race)."},
+    {
+        "race_name": "Aarakocra",
+        "name": "Language",
+        "source_name": "DMG",
+        "text": "You can speak, read, and write Auran."},
+    {
+        "race_name": "Centaur",
+        "name": "Size",
+        "source_name": "GGR",
+        "text": "Centaurs stand between 6 and 7 feet tall, with their equine bodies reaching about 4 feet at the withers. Your size is Medium."},
+    {
+        "race_name": "Aasimar",
+        "name": "Size",
+        "source_name": "MPMM",
+        "text": "You are Medium or Small. You choose the size when you select this race."},
+    {
+        "race_name": "Bullywug",
+        "name": "Swamp Camouflage",
+        "source_name": "DMG",
+        "text": "You have advantage on Dexterity ({@skill Stealth}) checks made to hide in swampy terrain."},
+    {
+        "race_name": "Changeling",
+        "name": "Changeling Instincts",
+        "source_name": "ERLW",
+        "text": "You gain proficiency with two of the following skills of your choice: {@skill Deception}, {@skill Insight}, {@skill Intimidation}, and {@skill Persuasion}."},
+    {
+        "race_name": "Bullywug",
+        "name": "Languages",
+        "source_name": "DMG",
+        "text": "You can speak, read, and write Bullywug."},
+    {
+        "race_name": "Aasimar",
+        "name": "Celestial Legacy",
+        "source_name": "DMG",
+        "text": "You know the {@spell light} cantrip. Once you reach 3rd level, you can cast the {@spell lesser restoration} spell once with this trait, and you regain the ability to do so when you finish a long rest. Once you reach 5th level, you can cast the {@spell daylight} spell once with this trait, and you regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."},
+    {
+        "race_name": "Centaur",
+        "name": "Fey",
+        "source_name": "GGR",
+        "text": "Your creature type is fey, rather than humanoid."},
+    {
+        "race_name": "Centaur",
+        "name": "Equine Build",
+        "source_name": "GGR",
+        "text": "You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs you 4 extra feet, instead of the normal 1 extra foot."},
+    {
+        "race_name": "Aasimar",
+        "name": "Size",
+        "source_name": "DMG",
+        "text": "Aasimar are built like well-proportioned humans. Your size is Medium."},
+    {
+        "race_name": "Bugbear",
+        "name": "Creature Type",
+        "source_name": "MPMM",
+        "text": "You are a Humanoid. You are also considered a goblinoid for any prerequisite or effect that requires you to be a goblinoid."},
+    {
+        "race_name": "Centaur",
+        "name": "Charge",
+        "source_name": "MPMM",
+        "text": "If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves."},
+    {
+        "race_name": "Changeling",
+        "name": "Size",
+        "source_name": "MPMM",
+        "text": "You are Medium or Small. You choose the size when you select this race."},
+    {
+        "race_name": "Centaur",
+        "name": "Hooves",
+        "source_name": "GGR",
+        "text": "Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to {@damage 1d4} + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."},
+    {
+        "race_name": "Bugbear",
+        "name": "Sneaky",
+        "source_name": "VGM",
+        "text": "You are proficient in the {@skill Stealth} skill."},
+    {
+        "race_name": "Aarakocra",
+        "name": "Flight",
+        "source_name": "MPMM",
+        "text": "Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor."},
+    {
+        "race_name": "Bugbear",
+        "name": "Size",
+        "source_name": "VGM",
+        "text": "Bugbears are between 6 and 8 feet tall and weigh between 250 and 350 pounds. Your size is Medium."},
+    {
+        "race_name": "Aasimar",
+        "name": "Language",
+        "source_name": "DMG",
+        "text": "You can speak, read, and write Common and Celestial."},
+    {
+        "race_name": "Centaur",
+        "name": "Charge",
+        "source_name": "GGR",
+        "text": "If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves."},
+    {
+        "race_name": "Bugbear",
+        "name": "Surprise Attack",
+        "source_name": "VGM",
+        "text": "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra {@dice 2d6} damage to it. You can use this trait only once per combat."},
+    {
+        "race_name": "Aasimar",
+        "name": "Age",
+        "source_name": "DMG",
+        "text": "Aasimar mature at the same rate as humans but live a few years longer."},
+    {
+        "race_name": "Bugbear",
+        "name": "Long-Limbed",
+        "source_name": "VGM",
+        "text": "When you make a melee attack on your turn, your reach for it is 5 feet greater than normal."},
+    {
+        "race_name": "Bugbear",
+        "name": "Darkvision",
+        "source_name": "VGM",
+        "text": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."},
+    {
+        "race_name": "Centaur",
+        "name": "Equine Build",
+        "source_name": "MPMM",
+        "text": "You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs you 4 extra feet instead of the normal 1 extra foot."},
+    {
+        "race_name": "Aasimar",
+        "name": "Light Bearer",
+        "source_name": "MPMM",
+        "text": "You know the {@spell light} cantrip. Charisma is your spellcasting ability for it."},
+    {
+        "race_name": "Aasimar",
+        "name": "Healing Hands",
+        "source_name": "MPMM",
+        "text": "As an action, you can touch a creature and roll a number of d4s equal to your proficiency bonus. The creature regains a number of hit points equal to the total rolled. Once you use this trait, you can't use it again until you finish a long rest."},
+    {
+        "race_name": "Changeling",
+        "name": "Age",
+        "source_name": "ERLW",
+        "text": "Changelings mature slightly faster than humans but share a similar lifespan—typically a century or less. While a changeling can transform to conceal their age, the effects of aging affect them similarly to humans."},
+    {
+        "race_name": "Aasimar",
+        "name": "Languages",
+        "source_name": "VGM",
+        "text": "You can speak, read, and write Common and Celestial."},
+    {
+        "race_name": "Centaur",
+        "name": "Survivor",
+        "source_name": "GGR",
+        "text": "You have proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Medicine}, {@skill Nature}, or {@skill Survival}."},
+    {
+        "race_name": "Bullywug",
+        "name": "Amphibious",
+        "source_name": "DMG",
+        "text": "You can breathe air and water."},
+    {
+        "race_name": "Aasimar",
+        "name": "Celestial Resistance",
+        "source_name": "DMG",
+        "text": "You have resistance to necrotic and radiant damage."},
+    {
+        "race_name": "Aasimar",
+        "name": "Celestial Revelation",
+        "source_name": "MPMM",
+        "text": "When you reach 3rd level, choose one of the revelation options below. Thereafter, you can use a bonus action to unleash the celestial energy within yourself, gaining the benefits of that revelation. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation below, you can't use it again until you finish a long rest. [object Object]"},
+    {
+        "race_name": "Aarakocra",
+        "name": "Dive Attack",
+        "source_name": "DMG",
+        "text": "If you are flying and dive at least 30 ft. straight toward a target and then hit it with a melee weapon attack, the attack deals an extra {@dice 1d6} damage to the target."},
+    {
+        "race_name": "Aasimar",
+        "name": "Size",
+        "source_name": "VGM",
+        "text": "Aasimar have the same range of height and weight as humans."},
+    {
+        "race_name": "Changeling",
+        "name": "Shapechanger",
+        "source_name": "ERLW",
+        "text": "As an action, you can change your appearance and your voice. You determine the specifics of the changes, including your coloration, hair length, and sex. You can also adjust your height and weight, but not so much that your size changes. You can make yourself appear as a member of another race, though none of your game statistics change. You can't duplicate the appearance of a creature you've never seen, and you must adopt a form that has the same basic arrangement of limbs that you have. Your clothing and equipment aren't changed by this trait. You stay in the new form until you use an action to revert to your true form or until you die."},
+    {
+        "race_name": "Bugbear",
+        "name": "Alignment",
+        "source_name": "ERLW",
+        "text": "Bugbears live on the fringes of society even in Darguun, where they value self-sufficiency and violence. They are generally chaotic, organizing in loose tribes under charismatic and powerful leaders."},
+    {
+        "race_name": "Bugbear",
+        "name": "Surprise Attack",
+        "source_name": "MPMM",
+        "text": "If you hit a creature with an attack roll, the creature takes an extra {@damage 2d6} damage if it hasn't taken a turn yet in the current combat."},
+    {
+        "race_name": "Bugbear",
+        "name": "Surprise Attack",
+        "source_name": "ERLW",
+        "text": "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra {@dice 2d6} damage to it. You can use this trait only once per combat."},
+    {
+        "race_name": "Changeling",
+        "name": "Size",
+        "source_name": "ERLW",
+        "text": "Your size is Medium."},
+    {
+        "race_name": "Bugbear",
+        "name": "Size",
+        "source_name": "ERLW",
+        "text": "Your size is Medium."},
+    {
+        "race_name": "Aasimar",
+        "name": "Darkvision",
+        "source_name": "VGM",
+        "text": "Blessed with a radiant soul, your vision can easily cut through darkness. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."},
+    {
+        "race_name": "Aarakocra",
+        "name": "Talons",
+        "source_name": "DMG",
+        "text": "You are proficient with your unarmed strikes, which deal {@damage 1d4} slashing damage on a hit."},
+    {
+        "race_name": "Bullywug",
+        "name": "Speak with Frogs and Toads",
+        "source_name": "DMG",
+        "text": "You can communicate simple concepts to frogs and toads when you speak in Bullywug."},
+    {
+        "race_name": "Bullywug",
+        "name": "Standing Leap",
+        "source_name": "DMG",
+        "text": "Your long jump is up to 20 feet and your high jump is up to 10 feet, with or without a running start."},
+    {
+        "race_name": "Aasimar",
+        "name": "Darkvision",
+        "source_name": "MPMM",
+        "text": "You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."},
+    {
+        "race_name": "Bugbear",
+        "name": "Darkvision",
+        "source_name": "MPMM",
+        "text": "You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."},
+    {
+        "race_name": "Bugbear",
+        "name": "Languages",
+        "source_name": "VGM",
+        "text": "You can speak, read, and write Common and Goblin."},
+    {
+        "race_name": "Bugbear",
+        "name": "Darkvision",
+        "source_name": "ERLW",
+        "text": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."},
+    {
+        "race_name": "Bugbear",
+        "name": "Powerful Build",
+        "source_name": "MPMM",
+        "text": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."},
+    {
+        "race_name": "Changeling",
+        "name": "Changeling Instincts",
+        "source_name": "MPMM",
+        "text": "Thanks to your connection to the fey realm, you gain proficiency with two of the following skills of your choice: {@skill Deception}, {@skill Insight}, {@skill Intimidation}, {@skill Performance}, or {@skill Persuasion}."},
+    {
+        "race_name": "Centaur",
+        "name": "Creature Type",
+        "source_name": "MPMM",
+        "text": "You are a Fey."},
+    {
+        "race_name": "Centaur",
+        "name": "Languages",
+        "source_name": "GGR",
+        "text": "You can speak, read, and write Common and Sylvan. Sylvan is widely spoken in the Selesnya Conclave, for it is rich in vocabulary to describe natural phenomena and spiritual forces."},
+    {
+        "race_name": "Centaur",
+        "name": "Natural Affinity",
+        "source_name": "MPMM",
+        "text": "Your fey connection to nature gives you an intuitive connection to the natural world and the animals within it. You therefore have proficiency in one of the following skills of your choice: {@skill Animal Handling}, {@skill Medicine}, {@skill Nature}, or {@skill Survival}."},
+    {
+        "race_name": "Aasimar",
+        "name": "Healing Hands",
+        "source_name": "VGM",
+        "text": "As an action, you can touch a creature and cause it to regain a number of hit points equal to your level. Once you use this trait, you can't use it again until you finish a long rest."},
+    {
+        "race_name": "Changeling",
+        "name": "Shapechanger",
+        "source_name": "MPMM",
+        "text": "As an action, you change your appearance and your voice. You determine the specifics of the changes, including your coloration, hair length, and sex. You can also adjust your height between Medium and Small. You can make yourself appear as a member of another race, though none of your game statistics change. You can't duplicate the appearance of an individual you've never seen, and you must adopt a form that has the same basic arrangement of limbs that you have. Your clothing and equipment aren't changed by this trait. You stay in the new form until you use an action to revert to your true form or until you die."},
+    {
+        "race_name": "Centaur",
+        "name": "Age",
+        "source_name": "GGR",
+        "text": "Centaurs mature and age at about the same rate as humans." }
+]

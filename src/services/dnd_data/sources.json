@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Plane Shift: Innistrad",
+        "shorthand": "PS-I"
+    },
+    {
+        "name": "Plane Shift: Zendikar",
+        "shorthand": "PS-Z"
+    },
+    {
+        "name": "Dungeons & Dragons vs. Rick and Morty: Basic Rules",
+        "shorthand": "RMR"
+    },
+    {
+        "name": "Van Richten's Guide to Ravenloft",
+        "shorthand": "VRGR"
+    },
+    {
+        "name": "Player's Handbook",
+        "shorthand": "PHB"
+    },
+    {
+        "name": "Plane Shift: Kaladesh",
+        "shorthand": "PS-K"
+    },
+    {
+        "name": "Adventurers League",
+        "shorthand": "AL"
+    },
+    {
+        "name": "Volo's Guide to Monsters",
+        "shorthand": "VGM"
+    },
+    {
+        "name": "Plane Shift: Ixalan",
+        "shorthand": "PS-X"
+    },
+    {
+        "name": "Strixhaven: A Curriculum of Chaos",
+        "shorthand": "SCC"
+    },
+    {
+        "name": "Mythic Odysseys of Theros",
+        "shorthand": "MOT"
+    },
+    {
+        "name": "Monster Manual",
+        "shorthand": "MM"
+    },
+    {
+        "name": "Plane Shift: Dominaria",
+        "shorthand": "PS-D"
+    },
+    {
+        "name": "Sage Advice Compendium",
+        "shorthand": "SAC"
+    },
+    {
+        "name": "Eberron: Rising from the Last War",
+        "shorthand": "ERLW"
+    },
+    {
+        "name": "Explorer's Guide to Wildemount",
+        "shorthand": "EGW"
+    },
+    {
+        "name": "Xanathar's Guide to Everything",
+        "shorthand": "XGE"
+    },
+    {
+        "name": "Minsc and Boo's Journal of Villainy",
+        "shorthand": "MaBJoV"
+    },
+    {
+        "name": "Dungeon Master's Guide",
+        "shorthand": "DMG"
+    },
+    {
+        "name": "One Grung Above",
+        "shorthand": "OGA"
+    },
+    {
+        "name": "Acquisitions Incorporated",
+        "shorthand": "AI"
+    },
+    {
+        "name": "Domains of Delight",
+        "shorthand": "DoD"
+    },
+    {
+        "name": "Mordenkainen Presents: Monsters of the Multiverse",
+        "shorthand": "MPMM"
+    },
+    {
+        "name": "Guildmasters' Guide to Ravnica",
+        "shorthand": "GGR"
+    },
+    {
+        "name": "Fizban's Treasury of Dragons",
+        "shorthand": "FTD"
+    },
+    {
+        "name": "Mordenkainen's Tome of Foes",
+        "shorthand": "MTF"
+    },
+    {
+        "name": "Tasha's Cauldron of Everything",
+        "shorthand": "TCE"
+    },
+    {
+        "name": "Plane Shift: Amonkhet",
+        "shorthand": "PS-A"
+    },
+    {
+        "name": "Sword Coast Adventurer's Guide",
+        "shorthand": "SCAG"
+    }
+]
