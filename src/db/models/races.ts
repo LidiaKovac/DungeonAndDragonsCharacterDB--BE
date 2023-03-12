@@ -7,7 +7,7 @@ class Race extends Model {
     source_id!: string
     source_name!: string
     str!: number;
-    cos!: number;
+    con!: number;
     dex!: number;
     int!: number;
     cha!: number;
@@ -40,7 +40,7 @@ class Race extends Model {
                 int: {
                     type: INTEGER
                 },
-                cos: {
+                con: {
                     type: INTEGER
                 },
                 dex: {

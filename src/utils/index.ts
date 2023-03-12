@@ -1,17 +1,21 @@
-export const calculateProf = (lvl:number) => {
-    if(lvl >=1 && lvl <=4) {
+export const calculateProf = (lvl: string): number => {
+    const numLvl = Number(lvl)
+    if (numLvl >= 1 && numLvl <= 4) {
         return 2
-    } 
-    if(lvl >=5 && lvl <=8) {
+    }
+    if (numLvl >= 5 && numLvl <= 8) {
         return 3
     }
-    if(lvl >=9 && lvl <=12) {
+    if (numLvl >= 9 && numLvl <= 12) {
         return 4
     }
-    if(lvl >=13 && lvl <=16) {
+    if (numLvl >= 13 && numLvl <= 16) {
         return 5
     }
-    if(lvl >=17 && lvl <=20) {
+    if (numLvl >= 17 && numLvl <= 20) {
         return 6
     }
+    return 0
 }
+
+export const abs = ["cha", "str", "con", "dex", "int", "wis"]

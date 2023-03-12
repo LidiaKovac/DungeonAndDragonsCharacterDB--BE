@@ -1,6 +1,7 @@
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
 
 class Classes extends Model {
+    [key: string]: string | number | Function | any //any added to support under-the-hood sequelize props
 
     id!: number
     name!: string
@@ -17,7 +18,7 @@ class Classes extends Model {
     weaponProf!: string
     toolsProf!: string
     skillProfNum!: number
-    skillProf!: string
+    skillProf!: string | string[]
     startEquip!: string
 
     static initialize(sequelize: Sequelize) {
@@ -59,7 +60,7 @@ class Classes extends Model {
                     type: STRING(1000)
                 },
                 spellAbility: {
-                    type: STRING(3)
+                    type: STRING
                 },
                 armorProf: {
                     type: STRING(1000)

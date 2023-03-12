@@ -1,15 +1,17 @@
 import { ARRAY } from "sequelize";
 import { JSON } from "sequelize";
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
+import Classes from "./classes";
 import Race from "./races";
+import RacialTrait from "./racial_feat";
 
 class Character extends Model {
-
+    [key: string]: string | number | Function | any //any added to support under-the-hood sequelize props
     id!: number;
     name!: string;
 
     str!: number;
-    cos!: number;
+    con!: number;
     dex!: number;
     int!: number;
     cha!: number;
@@ -21,8 +23,8 @@ class Character extends Model {
     hit_points!: number
     level!: number
     addClass!: Function //this function will be created by Sequelize, we need to add it here so that TS will recognize it
-    addRace!: Function //this function will be created by Sequelize, we need to add it here so that TS will recognize it
-
+    Class!: Classes
+    Race!: RacialTrait
     created!: Date;
     updated!: Date;
 
@@ -45,7 +47,7 @@ class Character extends Model {
                 int: {
                     type: INTEGER
                 },
-                cos: {
+                con: {
                     type: INTEGER
                 },
                 dex: {

@@ -3,7 +3,7 @@ import { sign, verify } from "jsonwebtoken"
 import User from "../db/models/user"
 const { JWT_SECRET } = process.env
 export const generateJWT = (payload: JwtPayload) => {
-    return new Promise((res, rej) => sign(payload, JWT_SECRET!, { expiresIn: "5 min" }, (err, token) => {
+    return new Promise((res, rej) => sign(payload, JWT_SECRET!, { expiresIn: "1 day" }, (err, token) => {
         if (err) res(err)
         else res(token)
     }))

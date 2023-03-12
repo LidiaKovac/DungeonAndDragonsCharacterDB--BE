@@ -1,1 +1,1 @@
-SELECT * FROM "Users"
+DELETE FROM "Chars" WHERE level = 1
