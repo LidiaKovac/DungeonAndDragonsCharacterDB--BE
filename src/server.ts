@@ -19,7 +19,7 @@ import userRoute from "./services/users"
 app.use(express.json())
 
 // app.use(require("helmet")())
-app.options('*', cors())
+// app.options('*', cors())
 app.use("/passive", passive_data)
 app.use("/api/character", characterRoute)
 app.use("/api/user", userRoute)
