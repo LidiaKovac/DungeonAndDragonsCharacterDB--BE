@@ -2,12 +2,14 @@ import Character from "./models/character"
 import Classes from "./models/classes"
 import ClassTrait from "./models/class_feat"
 import Feats from "./models/feats"
+import Inspo from "./models/inspo"
 import Race from "./models/races"
 import RacialTrait from "./models/racial_feat"
 import Source from "./models/sources"
 import User from "./models/user"
 
 export const initRelations = () => {
+    //all character relations
     Character.belongsTo(Classes)
     Classes.hasMany(Character)
     
@@ -17,6 +19,9 @@ export const initRelations = () => {
     Character.belongsTo(User)
     User.hasMany(Character)
 
+    Character.hasMany(Inspo)
+    Inspo.belongsTo(Character)
+    
     Classes.belongsTo(Source)
     Source.hasMany(Classes)
 

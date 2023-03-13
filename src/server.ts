@@ -13,7 +13,9 @@ import characterRoute from "./services/characters"
 import userRoute from "./services/users"
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: ["https://heartfelt-pasca-9ed41e.netlify.app/", "http://localhost:3001"]
+}))
 app.use(require("helmet")())
 
 app.use("/passive", passive_data)
