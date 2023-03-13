@@ -27,7 +27,7 @@ app.use("/api/character", characterRoute)
 app.use("/api/user", userRoute)
 
 sequelize.sync({ force: false, logging: false, alter: true }).then((result: any) => {
-    app.listen(PORT, () => {
+    app.listen(PORT || 3001, () => {
         console.log(
             "🌚🌝 Server is running on",
             PORT,
