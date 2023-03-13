@@ -14,7 +14,7 @@ import userRoute from "./services/users"
 
 app.use(cors({
     exposedHeaders: "token",
-    origin: ["https://heartfelt-pasca-9ed41e.netlify.app/", "http://localhost:3001"]
+    origin: ["https://heartfelt-pasca-9ed41e.netlify.app", "http://localhost:3000"]
 }))
 app.use(express.json())
 
