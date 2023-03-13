@@ -12,7 +12,9 @@ import passive_data from "./services/dnd_data/index"
 import characterRoute from "./services/characters"
 import userRoute from "./services/users"
 
-app.use(cors())
+app.use(cors({
+    origin: ["netlify.app", "http://localhost:3000"]
+}))
 app.use(express.json())
 
 // app.use(require("helmet")())
