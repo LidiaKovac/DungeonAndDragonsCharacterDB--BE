@@ -14,10 +14,11 @@ import userRoute from "./services/users"
 
 app.use(express.json())
 app.use(cors({
+    exposedHeaders: "token",
     origin: ["https://heartfelt-pasca-9ed41e.netlify.app/", "http://localhost:3001"]
 }))
 app.use(require("helmet")())
-
+app.options('*', cors())
 app.use("/passive", passive_data)
 app.use("/api/character", characterRoute)
 app.use("/api/user", userRoute)
