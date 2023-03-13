@@ -12,14 +12,14 @@ import passive_data from "./services/dnd_data/index"
 import characterRoute from "./services/characters"
 import userRoute from "./services/users"
 
-// app.use(cors({
-//     exposedHeaders: "token",
-//     origin: "*"
-// }))
+app.use(cors({
+    exposedHeaders: "token",
+    origin: "*"
+}))
 app.use(express.json())
 
 // app.use(require("helmet")())
-// app.options('*', cors())
+app.options('*', cors())
 app.use("/passive", passive_data)
 app.use("/api/character", characterRoute)
 app.use("/api/user", userRoute)
