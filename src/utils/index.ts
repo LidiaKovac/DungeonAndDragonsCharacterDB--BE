@@ -19,3 +19,27 @@ export const calculateProf = (lvl: string): number => {
 }
 
 export const abs = ["cha", "str", "con", "dex", "int", "wis"]
+export const classAttributes = ["id",
+              "name",
+              "source_name",
+              "hit_die",
+              "skillProfNum",
+              "skillProf",
+              "weaponProf",
+              "armorProf",
+              "prof_1",
+              "prof_2",
+              "prof_3",
+              "prof_4",]
+export const raceAttributes = ["id", "name", "source_name", ...abs]
+export const charAttributes = [
+          "ab_prof_1",
+          "ab_prof_2",
+          "ab_prof_3",
+          "ab_prof_4",
+          ...abs,
+          "hit_points",
+          "id",
+          "name",
+          "level",
+        ]
