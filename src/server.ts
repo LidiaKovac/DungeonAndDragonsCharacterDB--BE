@@ -4,7 +4,7 @@ import endpoints from "express-list-endpoints"
 import cors from "cors"
 config()
 import { sequelize } from "./db/index"
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001
 
 const app = express()
 
@@ -12,9 +12,7 @@ import passive_data from "./services/dnd_data/index"
 import characterRoute from "./services/characters"
 import userRoute from "./services/users"
 
-app.use(cors({
-    origin: ["netlify.app", "http://localhost:3000"]
-}))
+app.use(cors())
 app.use(express.json())
 
 // app.use(require("helmet")())
@@ -27,7 +25,7 @@ app.use("/api/character", characterRoute)
 app.use("/api/user", userRoute)
 
 sequelize.sync({ force: false, logging: false, alter: true }).then((result: any) => {
-    app.listen(PORT || 3001, () => {
+    app.listen(PORT , () => {
         console.log(
             "🌚🌝 Server is running on",
             PORT,
