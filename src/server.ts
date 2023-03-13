@@ -4,7 +4,7 @@ import endpoints from "express-list-endpoints"
 import cors from "cors"
 config()
 import { sequelize } from "./db/index"
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 
 const app = express()
 
