@@ -138,6 +138,13 @@ characterRoute.put(
   [authMidd, multer().fields([{ name: "name" }, { name: "level" }])],
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
+      for (const key in req.body) {
+        if (Object.prototype.hasOwnProperty.call(req.body, key)) {
+          if(abs.includes(key)) {
+            req.body[key] = Number(req.body[key])
+          }
+        }
+      }
       let edit = await Character.update(
         {
           ...req.body,
