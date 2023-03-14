@@ -12,6 +12,7 @@ import {
   charAttributes,
   classAttributes,
   raceAttributes,
+  getModifiers
 } from "../../utils"
 import { authMidd } from "../../utils/auth"
 import multer from "multer"
@@ -70,7 +71,11 @@ characterRoute.get(
         ],
       })
       if (!selectedChars) res.status(403).send("This is not your character!")
-      else res.send(selectedChars)
+      else {
+        const modifiers = await getModifiers(selectedChars)
+        console.log(modifiers);
+        
+        res.send({char: selectedChars, modifiers})}
     } catch (e) {
       next(e)
     }
@@ -157,8 +162,17 @@ characterRoute.put(
         }
       )
       if (edit) {
-        let updated = await Character.findByPk(req.params.id)
-        res.status(201).send(updated)
+        let updated = await Character.findByPk(req.params.id, {
+          attributes: charAttributes,
+        include: [
+          { model: Race, attributes: raceAttributes },
+          {
+            model: Classes,
+            attributes: classAttributes,
+          },
+        ],
+        })
+        res.status(201).send({char: updated, modifiers: await getModifiers(updated!)})
       } else {
         res.sendStatus(400)
       }
