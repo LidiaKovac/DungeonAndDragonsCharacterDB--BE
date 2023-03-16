@@ -13,6 +13,8 @@ import {
   classAttributes,
   raceAttributes,
   getModifiers,
+  findOneCharOptions,
+  getSkills,
 } from "../../utils"
 import { authMidd } from "../../utils/auth"
 import multer from "multer"
@@ -58,39 +60,13 @@ characterRoute.get(
           id: req.params.id,
           UserId: req.user.id,
         },
-        attributes: charAttributes,
-        include: [
-          {
-            model: Classes,
-            attributes: classAttributes,
-            include: [{ model: Source, attributes: ["name", "shorthand"] }],
-          },
-          {
-            model: Race,
-            attributes: raceAttributes,
-            include: [{ model: Source, attributes: ["name", "shorthand"] }],
-          },
-        ],
-      })
+        ...findOneCharOptions
+      },)
       if (!selectedChars) res.status(403).send("This is not your character!")
       else {
         const modifiers = await getModifiers(selectedChars)
-        let charSkills = selectedChars.Class.skillProf as string
-        const skills = await Skill.findAll({
-          where: {
-            name: {
-              [Op.iLike]: {
-                [Op.any]: charSkills.split(","),
-              },
-            },
-          },
-          attributes: ["name", "ab"],
-        })
-        const allSkills = await Skill.findAll()
-
-        let copyOfSel = selectedChars
-        copyOfSel.Class.skillProf = skills
-        res.send({ char: copyOfSel, modifiers, skills: allSkills })
+        const { charWithProfs, skills } = await getSkills(selectedChars)
+        res.send({ char: charWithProfs, modifiers, skills })
       }
     } catch (e) {
       next(e)
@@ -114,14 +90,7 @@ characterRoute.post(
       let charWithClass = await Character.findOne({
         where: { id: char.id },
 
-        attributes: charAttributes,
-        include: [
-          { model: Race, attributes: raceAttributes },
-          {
-            model: Classes,
-            attributes: classAttributes,
-          },
-        ],
+        ...findOneCharOptions
       })
 
       const keysToCheck = ["prof_1", "prof_2", "prof_3", "prof_4"]
@@ -131,11 +100,12 @@ characterRoute.post(
           [abToChange]:
             charWithClass[abToChange] || 0 + calculateProf(String(char.level)),
         })
+        charWithClass?.update({
+          skillProfLeft: charWithClass.Class.skillProfNum,
+        })
         await charWithClass?.save()
       }
       for (const ab of abs) {
-       
-
         charWithClass?.update({
           [ab]:
             Number(charWithClass[ab]) ||
@@ -151,6 +121,7 @@ characterRoute.post(
     }
   }
 )
+
 characterRoute.put(
   "/:id",
   [authMidd, multer().fields([{ name: "name" }, { name: "level" }])],
@@ -175,24 +146,13 @@ characterRoute.put(
         }
       )
       if (edit) {
-        let updated = await Character.findByPk(req.params.id, {
-          attributes: charAttributes,
-          include: [
-            { model: Race, attributes: raceAttributes },
-            {
-              model: Classes,
-              attributes: classAttributes,
-            },
-          ],
-        })
+        let updated = await Character.findByPk(req.params.id, findOneCharOptions)
         const skills = await Skill.findAll()
-        res
-          .status(201)
-          .send({
-            char: updated,
-            modifiers: await getModifiers(updated!),
-            skills,
-          })
+        res.status(201).send({
+          char: updated,
+          modifiers: await getModifiers(updated!),
+          skills,
+        })
       } else {
         res.sendStatus(400)
       }
@@ -201,6 +161,72 @@ characterRoute.put(
     }
   }
 )
+
+characterRoute.put(
+  "/:id/addSkill/:skillName",
+  authMidd,
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const charToEdit = await Character.findOne({
+        where: {
+          // UserId: req.user.id,
+          id: req.params.id,
+        }, 
+        ...findOneCharOptions
+      })
+      if (!charToEdit) {
+        res.status(404).send("User not found")
+      } else if (charToEdit.UserId !== req.user.id) {
+        res.status(403).send("This is not your user!")
+      } else {
+        if (charToEdit.skillProfLeft <= 0) {
+          res.status(403).send("You cannot add any more profs")
+        } else {
+
+          const skill = await Skill.findOne({
+            where: {
+              name: req.params.skillName,
+            },
+          })
+          if (charToEdit.Skill?.map((sk: Skill) => sk.name).includes(req.params.name)) {
+            charToEdit.removeSkill(skill!.id)
+            await Character.update(
+              {
+                skillProfLeft: charToEdit.skillProfLeft + 1,
+              },
+              {
+                where: {
+                  id: req.params.id,
+                },
+              }
+            )
+          } else {
+            charToEdit.addSkill(skill!.id)
+
+            await Character.update(
+              {
+                skillProfLeft: charToEdit.skillProfLeft - 1,
+              },
+              {
+                where: {
+                  id: req.params.id,
+                },
+              }
+            )
+          }
+
+          const updated = await Character.findByPk(charToEdit.id, findOneCharOptions)
+          delete updated!.Skills[0].CharSkill
+          let {charWithProfs: charWithSkills} = await getSkills(updated!)
+          res.status(201).send(charWithSkills)
+        }
+      }
+    } catch (error) {
+      next(error)
+    }
+  }
+)
+
 characterRoute.delete(
   "/:id",
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {

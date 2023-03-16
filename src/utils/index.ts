@@ -1,7 +1,9 @@
+import { Op } from "sequelize"
 import Character from "../db/models/character"
 import Classes from "../db/models/classes"
 import Race from "../db/models/races"
 import Skill from "../db/models/skills"
+import Source from "../db/models/sources"
 
 export const calculateProf = (lvl: string): number => {
   const numLvl = Number(lvl)
@@ -89,10 +91,48 @@ export const classAttributes = [
 ]
 export const raceAttributes = ["id", "name", "source_name", ...abs]
 export const charAttributes = [
-  'initiativeMod', 'currentInitiative', 'deathScore', 'description',
+  'initiativeMod', 'currentInitiative', 'deathScore', 'description', "skillProfLeft",
   ...abs,
   "hit_points",
   "id",
   "name",
-  "level",
+  "level", "UserId"
 ]
+
+export const findOneCharOptions = {
+
+  attributes: charAttributes,
+  include: [
+    {
+      model: Classes,
+      attributes: classAttributes,
+      include: [{ model: Source, attributes: ["name", "shorthand"] }],
+    },
+    {
+      model: Race,
+      attributes: raceAttributes,
+      include: [{ model: Source, attributes: ["name", "shorthand"] }],
+    },
+    { model: Skill, attributes: ["name", "ab"] }
+
+  ],
+}
+
+export const getSkills = async(char:Character) => {
+  let charSkills = char.Class.skillProf as string
+        const skills = await Skill.findAll({
+          where: {
+            name: {
+              [Op.iLike]: {
+                [Op.any]: charSkills.split(","),
+              },
+            },
+          },
+          attributes: ["name", "ab"],
+        })
+        const allSkills = await Skill.findAll()
+
+        let copyOfSel = char
+        copyOfSel.Class.skillProf = skills
+        return {charWithProfs: copyOfSel, skills: allSkills}
+}

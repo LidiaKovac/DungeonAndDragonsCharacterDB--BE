@@ -29,8 +29,8 @@ export const initRelations = () => {
     Character.hasMany(Inspo)
     Inspo.belongsTo(Character)
 
-    Character.hasMany(Skill)
-    Skill.belongsToMany(Character, { through: "CharSkill", as: "profSkills" })
+    Character.belongsToMany(Skill, { through: "CharSkill" })
+    Skill.belongsToMany(Character, { through: "CharSkill" })
 
     //each class belongs has one source, but sources can have many classes
     Classes.belongsTo(Source)

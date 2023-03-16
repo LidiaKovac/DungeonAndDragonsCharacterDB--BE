@@ -1,12 +1,11 @@
-import { ARRAY } from "sequelize";
+import { ARRAY, BelongsToManyAddAssociationMixin, InferAttributes, InferCreationAttributes } from "sequelize";
 import { JSON } from "sequelize";
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
 import Classes from "./classes";
 import Race from "./races";
 import RacialTrait from "./racial_feat";
-interface Char {
-    
-}
+import Skill from "./skills";
+
 
 class Character extends Model {
     [key: string]: string | number | Function | any //any added to support under-the-hood sequelize props
@@ -21,9 +20,12 @@ class Character extends Model {
     wis!: number;
     initiativeMod!: number;
     currentInitiative!: number;
+    skillProfLeft!: number
     hit_points!: number
     level!: number
-    addClass!: Function //this function will be created by Sequelize, we need to add it here so that TS will recognize it
+    addSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
+    removeSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
+    
     Class!: Classes
     Race!: RacialTrait
     description!: string 
@@ -43,7 +45,9 @@ class Character extends Model {
                     type: STRING(100),
                     allowNull: false,
                 },
-                
+                skillProfLeft: {
+                    type: INTEGER
+                },
                 str: {
                     type: INTEGER
                 },
