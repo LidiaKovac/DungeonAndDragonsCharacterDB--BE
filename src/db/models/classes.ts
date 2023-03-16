@@ -1,4 +1,5 @@
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
+import Skill from "./skills";
 
 class Classes extends Model {
     [key: string]: string | number | Function | any //any added to support under-the-hood sequelize props
@@ -18,7 +19,7 @@ class Classes extends Model {
     weaponProf!: string
     toolsProf!: string
     skillProfNum!: number
-    skillProf!: string | string[]
+    skillProf!: string | Skill[]
     startEquip!: string
 
     static initialize(sequelize: Sequelize) {

@@ -12,10 +12,12 @@ import {
   charAttributes,
   classAttributes,
   raceAttributes,
-  getModifiers
+  getModifiers,
 } from "../../utils"
 import { authMidd } from "../../utils/auth"
 import multer from "multer"
+import Skill from "../../db/models/skills"
+import { Op } from "sequelize"
 
 characterRoute.get(
   "/",
@@ -73,9 +75,23 @@ characterRoute.get(
       if (!selectedChars) res.status(403).send("This is not your character!")
       else {
         const modifiers = await getModifiers(selectedChars)
-        console.log(modifiers);
-        
-        res.send({char: selectedChars, modifiers})}
+        let charSkills = selectedChars.Class.skillProf as string
+        const skills = await Skill.findAll({
+          where: {
+            name: {
+              [Op.iLike]: {
+                [Op.any]: charSkills.split(","),
+              },
+            },
+          },
+          attributes: ["name", "ab"],
+        })
+        const allSkills = await Skill.findAll()
+
+        let copyOfSel = selectedChars
+        copyOfSel.Class.skillProf = skills
+        res.send({ char: copyOfSel, modifiers, skills: allSkills })
+      }
     } catch (e) {
       next(e)
     }
@@ -118,10 +134,7 @@ characterRoute.post(
         await charWithClass?.save()
       }
       for (const ab of abs) {
-        console.log(
-          (charWithClass![ab] as number) || 0,
-          charWithClass?.getDataValue("Race").getDataValue(ab)
-        )
+       
 
         charWithClass?.update({
           [ab]:
@@ -145,7 +158,7 @@ characterRoute.put(
     try {
       for (const key in req.body) {
         if (Object.prototype.hasOwnProperty.call(req.body, key)) {
-          if(abs.includes(key)) {
+          if (abs.includes(key)) {
             req.body[key] = Number(req.body[key])
           }
         }
@@ -164,15 +177,22 @@ characterRoute.put(
       if (edit) {
         let updated = await Character.findByPk(req.params.id, {
           attributes: charAttributes,
-        include: [
-          { model: Race, attributes: raceAttributes },
-          {
-            model: Classes,
-            attributes: classAttributes,
-          },
-        ],
+          include: [
+            { model: Race, attributes: raceAttributes },
+            {
+              model: Classes,
+              attributes: classAttributes,
+            },
+          ],
         })
-        res.status(201).send({char: updated, modifiers: await getModifiers(updated!)})
+        const skills = await Skill.findAll()
+        res
+          .status(201)
+          .send({
+            char: updated,
+            modifiers: await getModifiers(updated!),
+            skills,
+          })
       } else {
         res.sendStatus(400)
       }

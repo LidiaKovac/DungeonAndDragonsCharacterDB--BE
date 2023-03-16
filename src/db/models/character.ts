@@ -4,6 +4,9 @@ import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
 import Classes from "./classes";
 import Race from "./races";
 import RacialTrait from "./racial_feat";
+interface Char {
+    
+}
 
 class Character extends Model {
     [key: string]: string | number | Function | any //any added to support under-the-hood sequelize props
@@ -16,17 +19,17 @@ class Character extends Model {
     int!: number;
     cha!: number;
     wis!: number;
-    ab_prof_1!: number
-    ab_prof_2!: number
-    ab_prof_3!: number
-    ab_prof_4!: number
+    initiativeMod!: number;
+    currentInitiative!: number;
     hit_points!: number
     level!: number
     addClass!: Function //this function will be created by Sequelize, we need to add it here so that TS will recognize it
     Class!: Classes
     Race!: RacialTrait
-    created!: Date;
-    updated!: Date;
+    description!: string 
+    deathScore!: number
+    createdAt!: Date;
+    updatedAt!: Date;
 
     static initialize(sequelize: Sequelize) {
         this.init(
@@ -59,17 +62,17 @@ class Character extends Model {
                 wis: {
                     type: INTEGER
                 },
-                ab_prof_1: {
-                    type: STRING(100)
+                initiativeMod: {
+                    type: INTEGER
+                }, 
+                currentInitiative: {
+                    type: INTEGER
                 },
-                ab_prof_2: {
-                    type: STRING(100)
+                deathScore: {
+                    type: INTEGER
                 },
-                ab_prof_3: {
-                    type: STRING(100)
-                },
-                ab_prof_4: {
-                    type: STRING(100)
+                description: {
+                    type: STRING(5000)
                 },
                 hit_points: {
                     type: INTEGER

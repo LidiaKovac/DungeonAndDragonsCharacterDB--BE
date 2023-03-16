@@ -1,6 +1,7 @@
 import Character from "../db/models/character"
 import Classes from "../db/models/classes"
 import Race from "../db/models/races"
+import Skill from "../db/models/skills"
 
 export const calculateProf = (lvl: string): number => {
   const numLvl = Number(lvl)
@@ -22,12 +23,11 @@ export const calculateProf = (lvl: string): number => {
   return 0
 }
 
-export const getAbilityLevelModifier = (dieRoll:number) => {
+export const getAbilityLevelModifier = (dieRoll: number) => {
   return Math.floor((dieRoll - 10) / 2)
 }
 
 export const getModifiers = async (char: Character) => {
-
   const modfs = {
     cha: [],
     str: [],
@@ -43,24 +43,22 @@ export const getModifiers = async (char: Character) => {
     if (charClass[field] !== null) {
       //if there is no mod, it will be null
       let modValue = char[charClass[field]]
-      console.log(modValue, modfs[charClass[field]]);
-      
-      
+
+
       modfs[charClass[field]] = [...modfs[charClass[field]], {
         amount: calculateProf(String(char.level)),
         source: "class",
       }]
     }
   }
-  let charRace = await Race.findByPk(char.Race.id, {raw: true})
+  let charRace = await Race.findByPk(char.Race.id, { raw: true })
   if (!charRace) return null //replace with throw and add trycatch
 
   for (const ab of abs) {
-    console.log("welcome to the loop")
     if (charRace[ab as keyof Race] !== "0" && charRace[ab as keyof Race] !== null) {
       //if there is no mod, it will be "0"
       let modValue = charRace[ab as keyof Race] //modif
-      modfs[ab].push({ 
+      modfs[ab].push({
         amount: modValue as number,
         source: "race",
       })
@@ -91,10 +89,7 @@ export const classAttributes = [
 ]
 export const raceAttributes = ["id", "name", "source_name", ...abs]
 export const charAttributes = [
-  "ab_prof_1",
-  "ab_prof_2",
-  "ab_prof_3",
-  "ab_prof_4",
+  'initiativeMod', 'currentInitiative', 'deathScore', 'description',
   ...abs,
   "hit_points",
   "id",

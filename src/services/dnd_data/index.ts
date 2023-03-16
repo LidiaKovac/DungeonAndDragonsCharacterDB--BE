@@ -10,6 +10,7 @@ import Race from "../../db/models/races";
 import RacialTrait from "../../db/models/racial_feat";
 import Source from "../../db/models/sources";
 import Feats from "../../db/models/feats";
+import Skill from "../../db/models/skills";
 
 
 passive_data_router.get(
@@ -27,6 +28,21 @@ passive_data_router.get(
         }
     }
 );
+
+
+passive_data_router.post(
+    "/skill",
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        try {
+            const sources = await Skill.create(req.body);
+            sources.save()
+            res.send(sources)
+        } catch (e) {
+            next(e);
+        }
+    }
+);
+
 
 // SOURCE BY ID
 passive_data_router.get(
@@ -268,14 +284,14 @@ passive_data_router.delete(
 */
 passive_data_router.get("/class", async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let {attributes, complete} = req.query as Express.ParsedQs
-        
+        let { attributes, complete } = req.query as Express.ParsedQs
+
         let classes = await Classes.findAll({
             where: {
                 type: "class"
             },
             order: [["name", "ASC"]],
-            include: complete === "true" ? [{ model: ClassTrait }] : [], 
+            include: complete === "true" ? [{ model: ClassTrait }] : [],
             attributes: attributes!.split(",").concat("prof_1", "prof_2", "prof_3", "prof_4")
         })
         res.send(classes)
@@ -286,14 +302,14 @@ passive_data_router.get("/class", async (req: Request, res: Response, next: Next
 
 passive_data_router.get("/class/:id", async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let {attributes, complete} = req.query as Express.ParsedQs
-        
+        let { attributes, complete } = req.query as Express.ParsedQs
+
         let classes = await Classes.findOne({
             where: {
                 id: req.params.id
             },
             order: [["name", "ASC"]],
-            include: complete === "true" ? [{ model: ClassTrait }] : [], 
+            include: complete === "true" ? [{ model: ClassTrait }] : [],
             attributes: attributes!.split(",").concat("prof_1", "prof_2", "prof_3", "prof_4")
         })
         res.send(classes)
@@ -373,9 +389,8 @@ passive_data_router.post(
                     name: req.body.class_name
                 }, plain: true
             })
-            
-            if(classes === null) {
-                console.log(classes);
+
+            if (classes === null) {
                 classes = await Classes.findOne({
                     where: {
                         name: req.body.class_name.split(" ")[0]
@@ -401,7 +416,7 @@ passive_data_router.post(
                         SourceId: featSource !== null ? featSource?.id : null,
                         source_name: featSource !== null ? featSource?.name || "no data" : "no data",
                         level: feat.split(["|"])[feat.split(["|"]).length - 1] === " " ? 0 : 0
-                    }, {logging: false})
+                    }, { logging: false })
 
                 }
 
