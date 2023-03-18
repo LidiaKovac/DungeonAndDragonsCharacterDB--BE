@@ -124,7 +124,7 @@ characterRoute.post(
 
 characterRoute.put(
   "/:id",
-  [authMidd, multer().fields([{ name: "name" }, { name: "level" }])],
+  [authMidd, multer().fields([{ name: "name" }, { name: "level" }, {name: "description"}])],
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       for (const key in req.body) {
@@ -148,8 +148,9 @@ characterRoute.put(
       if (edit) {
         let updated = await Character.findByPk(req.params.id, findOneCharOptions)
         const skills = await Skill.findAll()
+          let {charWithProfs: charWithSkills} = await getSkills(updated!)
         res.status(201).send({
-          char: updated,
+          char: charWithSkills,
           modifiers: await getModifiers(updated!),
           skills,
         })
