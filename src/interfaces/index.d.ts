@@ -4,22 +4,48 @@ declare namespace Express {
     }
     interface ParsedQs {
         [field: string]: string
-
     }
 }
 
-interface JwtPayload { full_name: string, email: string, nickname: string, iat?: number, exp?: number }
+interface JwtPayload {
+    full_name: string
+    email: string
+    nickname: string
+    iat?: number
+    exp?: number
+}
 
 interface SingleMod {
-    amount: number | string
+    amount: number
     source: "class" | "race" | "die" //???????????
-  }
-  interface Modifiers {
-    [key: string]: SingleMod[]
-    cha: SingleMod[]
-    str: SingleMod[]
-    con: SingleMod[]
-    dex: SingleMod[]
-    int: SingleMod[]
-    wis: SingleMod[]
-  }
+}
+interface Modifiers {
+    [key: string]: {
+        mods: SingleMod[]
+        total: number
+    }
+    cha: {
+        mods: SingleMod[]
+        total: number
+    }
+    str: {
+        mods: SingleMod[]
+        total: number
+    }
+    con: {
+        mods: SingleMod[]
+        total: number
+    }
+    dex: {
+        mods: SingleMod[]
+        total: number
+    }
+    int: {
+        mods: SingleMod[]
+        total: number
+    }
+    wis: {
+        mods: SingleMod[]
+        total: number
+    }
+}
