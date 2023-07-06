@@ -22,6 +22,7 @@ class Character extends Model {
     currentInitiative!: number;
     skillProfLeft!: number
     hit_points!: number
+    curr_hp!: number
     level!: number
     addSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
     removeSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
@@ -79,6 +80,9 @@ class Character extends Model {
                     type: STRING(5000)
                 },
                 hit_points: {
+                    type: INTEGER
+                },
+                curr_hp: {
                     type: INTEGER
                 },
                 level: {

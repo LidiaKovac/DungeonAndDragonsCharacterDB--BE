@@ -124,7 +124,7 @@ characterRoute.post(
 
 characterRoute.put(
   "/:id",
-  [authMidd, multer().fields([{ name: "name" }, { name: "level" }, {name: "description"}])],
+  [authMidd, multer().fields([{ name: "name" }, { name: "level" }, { name: "description" }])],
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       for (const key in req.body) {
@@ -148,7 +148,7 @@ characterRoute.put(
       if (edit) {
         let updated = await Character.findByPk(req.params.id, findOneCharOptions)
         const skills = await Skill.findAll()
-          let {charWithProfs: charWithSkills} = await getSkills(updated!)
+        let { charWithProfs: charWithSkills } = await getSkills(updated!)
         res.status(201).send({
           char: charWithSkills,
           modifiers: await getModifiers(updated!),
@@ -172,7 +172,7 @@ characterRoute.put(
         where: {
           // UserId: req.user.id,
           id: req.params.id,
-        }, 
+        },
         ...findOneCharOptions
       })
       if (!charToEdit) {
@@ -218,7 +218,7 @@ characterRoute.put(
 
           const updated = await Character.findByPk(charToEdit.id, findOneCharOptions)
           delete updated!.Skills[0].CharSkill
-          let {charWithProfs: charWithSkills} = await getSkills(updated!)
+          let { charWithProfs: charWithSkills } = await getSkills(updated!)
           res.status(201).send(charWithSkills)
         }
       }

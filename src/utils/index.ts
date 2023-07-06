@@ -107,6 +107,7 @@ export const classAttributes = [
   "name",
   "source_name",
   "hit_die",
+  
   "skillProfNum",
   "skillProf",
   "weaponProf",
@@ -120,7 +121,7 @@ export const raceAttributes = ["id", "name", "source_name", ...abs, "speed"]
 export const charAttributes = [
   'initiativeMod', 'currentInitiative', 'deathScore', 'description', "skillProfLeft",
   ...abs,
-  "hit_points",
+  "hit_points", "curr_hp",
   "id",
   "name",
   "level", "UserId"
