@@ -4,6 +4,7 @@ import Classes from "../db/models/classes"
 import Race from "../db/models/races"
 import Skill from "../db/models/skills"
 import Source from "../db/models/sources"
+import Inspo from "../db/models/inspo"
 
 export const calculateProf = (lvl: string): number => {
   const numLvl = Number(lvl)
@@ -107,7 +108,7 @@ export const classAttributes = [
   "name",
   "source_name",
   "hit_die",
-  
+
   "skillProfNum",
   "skillProf",
   "weaponProf",
@@ -124,7 +125,7 @@ export const charAttributes = [
   "hit_points", "curr_hp",
   "id",
   "name",
-  "level", "UserId"
+  "level", "UserId", "prof", "updatedAt"
 ]
 
 export const findOneCharOptions = {
@@ -141,8 +142,11 @@ export const findOneCharOptions = {
       attributes: raceAttributes,
       include: [{ model: Source, attributes: ["name", "shorthand"] }],
     },
+    {
+      model: Inspo,
+      attributes: ['url']
+    },
     { model: Skill, attributes: ["name", "ab"] }
-
   ],
 }
 

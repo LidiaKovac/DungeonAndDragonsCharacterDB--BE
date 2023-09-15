@@ -20,6 +20,8 @@ import { authMidd } from "../../utils/auth"
 import multer from "multer"
 import Skill from "../../db/models/skills"
 import { Op } from "sequelize"
+import { cloudinaryMulter } from "../../utils/cloudinary"
+import Inspo from "../../db/models/inspo"
 
 characterRoute.get(
   "/",
@@ -64,9 +66,13 @@ characterRoute.get(
       },)
       if (!selectedChars) res.status(403).send("This is not your character!")
       else {
-        const modifiers = await getModifiers(selectedChars)
-        const { charWithProfs, skills } = await getSkills(selectedChars)
-        res.send({ char: charWithProfs, modifiers, skills })
+        if (!selectedChars.Class || !selectedChars.Race) res.send({ char: selectedChars })
+        else {
+          const modifiers = await getModifiers(selectedChars)
+          const { charWithProfs, skills } = await getSkills(selectedChars)
+          charWithProfs.prof = calculateProf(charWithProfs.level.toString())
+          res.send({ char: charWithProfs, modifiers, skills })
+        }
       }
     } catch (e) {
       next(e)
@@ -75,47 +81,47 @@ characterRoute.get(
 )
 characterRoute.post(
   "/",
-  [authMidd, multer().fields([{ name: "name" }, { name: "level" }])],
+  [authMidd, cloudinaryMulter.array("inspo")],
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       //created new char
       let char = await Character.create({
         ...req.body,
         UserId: req.user.id,
-        RaceId: req.body.race,
-        ClassId: req.body.classes,
       })
+      for (const file of req.files as Express.Multer.File[]) {
+        await Inspo.create({ url: file.path, CharId: char.id })
+      }
       //need to send back char with prof
 
-      let charWithClass = await Character.findOne({
+      let charWithInspo = await Character.findOne({
         where: { id: char.id },
-
         ...findOneCharOptions
       })
 
-      const keysToCheck = ["prof_1", "prof_2", "prof_3", "prof_4"]
-      for (const key of keysToCheck) {
-        let abToChange = charWithClass?.getDataValue("Class").getDataValue(key)
-        charWithClass?.update({
-          [abToChange]:
-            charWithClass[abToChange] || 0 + calculateProf(String(char.level)),
-        })
-        charWithClass?.update({
-          skillProfLeft: charWithClass.Class.skillProfNum,
-        })
-        await charWithClass?.save()
-      }
-      for (const ab of abs) {
-        charWithClass?.update({
-          [ab]:
-            Number(charWithClass[ab]) ||
-            0 + Number(charWithClass?.getDataValue("Race").getDataValue(ab)),
-        })
-        await charWithClass?.save()
-      }
+      // const keysToCheck = ["prof_1", "prof_2", "prof_3", "prof_4"]
+      // for (const key of keysToCheck) {
+      //   let abToChange = charWithClass?.getDataValue("Class").getDataValue(key)
+      //   charWithClass?.update({
+      //     [abToChange]:
+      //       charWithClass[abToChange] || 0 + calculateProf(String(char.level)),
+      //   })
+      //   charWithClass?.update({
+      //     skillProfLeft: charWithClass.Class.skillProfNum,
+      //   })
       //   await charWithClass?.save()
-      charWithClass?.reload()
-      res.send(charWithClass)
+      // }
+      // for (const ab of abs) {
+      //   charWithClass?.update({
+      //     [ab]:
+      //       Number(charWithClass[ab]) ||
+      //       0 + Number(charWithClass?.getDataValue("Race").getDataValue(ab)),
+      //   })
+      //   await charWithClass?.save()
+      // }
+      // //   await charWithClass?.save()
+      // charWithClass?.reload()
+      res.send(charWithInspo)
     } catch (e) {
       next(e)
     }
@@ -143,19 +149,23 @@ characterRoute.put(
             id: req.params.id,
             UserId: req.user.id,
           },
-        }
+
+        },
+
       )
-      if (edit) {
-        let updated = await Character.findByPk(req.params.id, findOneCharOptions)
+      let updated = await Character.findByPk(req.params.id, findOneCharOptions)
+      if (edit && updated?.Class && updated.Race) {
         const skills = await Skill.findAll()
         let { charWithProfs: charWithSkills } = await getSkills(updated!)
+        charWithSkills.prof = calculateProf(charWithSkills.level.toString())
+
         res.status(201).send({
           char: charWithSkills,
           modifiers: await getModifiers(updated!),
           skills,
         })
       } else {
-        res.sendStatus(400)
+        res.send({ char: updated })
       }
     } catch (e) {
       next(e)
@@ -164,7 +174,7 @@ characterRoute.put(
 )
 
 characterRoute.put(
-  "/:id/addSkill/:skillName",
+  "/:id/skills/:skillName",
   authMidd,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -180,27 +190,26 @@ characterRoute.put(
       } else if (charToEdit.UserId !== req.user.id) {
         res.status(403).send("This is not your user!")
       } else {
-        if (charToEdit.skillProfLeft <= 0) {
-          res.status(403).send("You cannot add any more profs")
-        } else {
-
-          const skill = await Skill.findOne({
-            where: {
-              name: req.params.skillName,
+        const skill = await Skill.findOne({
+          where: {
+            name: req.params.skillName,
+          },
+        })
+        if (skill && charToEdit.Skills?.map((sk: Skill) => sk.name).includes(skill.name)) {
+          charToEdit.removeSkill(skill!.id)
+          await Character.update(
+            {
+              skillProfLeft: Number(charToEdit.skillProfLeft) + 1,
             },
-          })
-          if (charToEdit.Skill?.map((sk: Skill) => sk.name).includes(req.params.name)) {
-            charToEdit.removeSkill(skill!.id)
-            await Character.update(
-              {
-                skillProfLeft: charToEdit.skillProfLeft + 1,
+            {
+              where: {
+                id: req.params.id,
               },
-              {
-                where: {
-                  id: req.params.id,
-                },
-              }
-            )
+            }
+          )
+        } else {
+          if (charToEdit.skillProfLeft <= 0) {
+            res.status(400).send("You cannot add any more profs")
           } else {
             charToEdit.addSkill(skill!.id)
 
@@ -216,11 +225,14 @@ characterRoute.put(
             )
           }
 
-          const updated = await Character.findByPk(charToEdit.id, findOneCharOptions)
-          delete updated!.Skills[0].CharSkill
-          let { charWithProfs: charWithSkills } = await getSkills(updated!)
-          res.status(201).send(charWithSkills)
+
         }
+        const updated = await Character.findByPk(charToEdit.id, findOneCharOptions)
+        delete updated!.Skills[0].CharSkill
+        let { charWithProfs: charWithSkills, skills } = await getSkills(updated!)
+        const modifiers = await getModifiers(charWithSkills)
+        charWithSkills.prof = calculateProf(charWithSkills.level.toString())
+        res.send({ char: charWithSkills, modifiers, skills })
       }
     } catch (error) {
       next(error)

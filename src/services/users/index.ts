@@ -37,6 +37,7 @@ userRoute.post(
   "/login",
   async ({ body }: Request, res: Response, next: NextFunction) => {
     try {
+      console.log(body)
       let foundUser = await User.findOne({
         where: {
           email: body.email,
@@ -51,7 +52,7 @@ userRoute.post(
         res
           .set("Access-Control-Expose-Headers", "token")
           .set("token", token as string)
-          .send(200)
+          .sendStatus(200)
       } else res.send(404)
     } catch (error) {
       next(error)

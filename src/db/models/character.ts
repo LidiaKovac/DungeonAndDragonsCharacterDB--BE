@@ -1,8 +1,6 @@
-import { ARRAY, BelongsToManyAddAssociationMixin, InferAttributes, InferCreationAttributes } from "sequelize";
-import { JSON } from "sequelize";
+import { BelongsToManyAddAssociationMixin, InferAttributes, InferCreationAttributes } from "sequelize";
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
 import Classes from "./classes";
-import Race from "./races";
 import RacialTrait from "./racial_feat";
 import Skill from "./skills";
 
@@ -24,12 +22,13 @@ class Character extends Model {
     hit_points!: number
     curr_hp!: number
     level!: number
+    prof!: number
     addSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
     removeSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
-    
+
     Class!: Classes
     Race!: RacialTrait
-    description!: string 
+    description!: string
     deathScore!: number
     createdAt!: Date;
     updatedAt!: Date;
@@ -69,7 +68,7 @@ class Character extends Model {
                 },
                 initiativeMod: {
                     type: INTEGER
-                }, 
+                },
                 currentInitiative: {
                     type: INTEGER
                 },
@@ -89,6 +88,9 @@ class Character extends Model {
                     type: INTEGER,
                     allowNull: false,
                     defaultValue: 1
+                },
+                prof: {
+                    type: INTEGER
                 }
 
             },

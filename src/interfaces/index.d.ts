@@ -1,10 +1,12 @@
-declare namespace Express {
-    interface Request {
-        user: User
+    declare namespace Express {
+        interface Request {
+            user: User
+        }
+        
     }
-    interface ParsedQs {
-        [field: string]: string
-    }
+
+interface IQuery extends Express.ParsedQs, Record<string, string> {
+
 }
 
 interface JwtPayload {

@@ -24,14 +24,25 @@ app.use("/passive", passive_data)
 app.use("/api/character", characterRoute)
 app.use("/api/user", userRoute)
 
-sequelize.sync({ force: false, logging: false, alter: true }).then((result: any) => {
-    app.listen(PORT , () => {
-        console.log(
-            "🌚🌝 Server is running on",
-            PORT,
-            " with these endpoints: ",
-        );
-        console.table(endpoints(app))
-    });
-});
+const initAPI = async () => {
+    try {
+
+        console.log("Starting the server...")
+        console.log("Connecting to DB...")
+        await sequelize.sync({ force: false, logging: false, alter: true })
+        app.listen(PORT, () => {
+            console.log(
+                "🌚🌝 Server is running on",
+                PORT,
+                " with these endpoints: ",
+            );
+            console.table(endpoints(app))
+        })
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+initAPI()
+
 export default app

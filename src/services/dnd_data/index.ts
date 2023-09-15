@@ -284,7 +284,7 @@ passive_data_router.delete(
 */
 passive_data_router.get("/class", async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let { attributes, complete } = req.query as Express.ParsedQs
+        let { attributes, complete } = req.query as IQuery
 
         let classes = await Classes.findAll({
             where: {
@@ -302,7 +302,7 @@ passive_data_router.get("/class", async (req: Request, res: Response, next: Next
 
 passive_data_router.get("/class/:id", async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let { attributes, complete } = req.query as Express.ParsedQs
+        let { attributes, complete } = req.query as IQuery
 
         let classes = await Classes.findOne({
             where: {
