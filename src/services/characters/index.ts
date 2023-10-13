@@ -240,6 +240,26 @@ characterRoute.put(
   }
 )
 
+characterRoute.put("/:id/inspo/:inspoId", authMidd, async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const inspo = await Inspo.findOne({
+      where: {
+        CharId: req.params.id,
+        id: req.params.inspoId
+      },
+    })
+    if (inspo) {
+      await inspo.update(req.body)
+      await inspo.save()
+      res.send(inspo)
+    } else {
+      res.send({ message: "not found" })
+    }
+  } catch (error) {
+    next(error)
+  }
+})
+
 characterRoute.delete(
   "/:id",
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {

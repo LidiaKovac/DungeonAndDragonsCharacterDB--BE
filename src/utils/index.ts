@@ -144,7 +144,7 @@ export const findOneCharOptions = {
     },
     {
       model: Inspo,
-      attributes: ['url']
+      attributes: ['url', 'id', 'x', 'y']
     },
     { model: Skill, attributes: ["name", "ab"] }
   ],

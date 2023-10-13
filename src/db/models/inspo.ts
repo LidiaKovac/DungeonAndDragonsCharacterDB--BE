@@ -4,6 +4,8 @@ class Inspo extends Model {
 
     id!: number
     url!: string
+    x!: number
+    y!: number
 
     static initialize(sequelize: Sequelize) {
         this.init(
@@ -18,6 +20,16 @@ class Inspo extends Model {
                 },
                 CharId: {
                     type: UUID,
+                },
+                x: {
+                    type: INTEGER,
+                    allowNull: false,
+                    defaultValue: 0,
+                },
+                y: {
+                    type: INTEGER,
+                    allowNull: false,
+                    defaultValue: 0,
                 }
             },
             {
