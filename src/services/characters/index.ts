@@ -89,7 +89,7 @@ characterRoute.post(
         ...req.body,
         UserId: req.user.id,
       })
-      for (const file of req.files as Express.Multer.File[]) {
+      for (const file of req.files) {
         await Inspo.create({ url: file.path, CharId: char.id })
       }
       //need to send back char with prof
@@ -99,28 +99,6 @@ characterRoute.post(
         ...findOneCharOptions
       })
 
-      // const keysToCheck = ["prof_1", "prof_2", "prof_3", "prof_4"]
-      // for (const key of keysToCheck) {
-      //   let abToChange = charWithClass?.getDataValue("Class").getDataValue(key)
-      //   charWithClass?.update({
-      //     [abToChange]:
-      //       charWithClass[abToChange] || 0 + calculateProf(String(char.level)),
-      //   })
-      //   charWithClass?.update({
-      //     skillProfLeft: charWithClass.Class.skillProfNum,
-      //   })
-      //   await charWithClass?.save()
-      // }
-      // for (const ab of abs) {
-      //   charWithClass?.update({
-      //     [ab]:
-      //       Number(charWithClass[ab]) ||
-      //       0 + Number(charWithClass?.getDataValue("Race").getDataValue(ab)),
-      //   })
-      //   await charWithClass?.save()
-      // }
-      // //   await charWithClass?.save()
-      // charWithClass?.reload()
       res.send(charWithInspo)
     } catch (e) {
       next(e)

@@ -1,6 +1,7 @@
     declare namespace Express {
         interface Request {
             user: User
+            files: Express.Multer.File[]
         }
         
     }

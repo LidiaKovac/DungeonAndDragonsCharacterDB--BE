@@ -29,7 +29,7 @@ const initAPI = async () => {
 
         console.log("Starting the server...")
         console.log("Connecting to DB...")
-        await sequelize.sync({ force: false, logging: false, alter: true })
+        await sequelize.sync({ force: false, logging: false, alter: false })
         app.listen(PORT, () => {
             console.log(
                 "🌚🌝 Server is running on",
