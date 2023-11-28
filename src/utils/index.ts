@@ -124,7 +124,7 @@ export const charAttributes = [
   ...abs,
   "hit_points", "curr_hp",
   "id",
-  "name",
+  "name", "complete",
   "level", "UserId", "prof", "updatedAt"
 ]
 

@@ -1,4 +1,4 @@
-import { BelongsToManyAddAssociationMixin, InferAttributes, InferCreationAttributes } from "sequelize";
+import { BOOLEAN, BelongsToManyAddAssociationMixin, InferAttributes, InferCreationAttributes } from "sequelize";
 import { STRING, INTEGER, Model, Sequelize, UUID, UUIDV4 } from "sequelize";
 import Classes from "./classes";
 import RacialTrait from "./racial_feat";
@@ -23,6 +23,7 @@ class Character extends Model {
     curr_hp!: number
     level!: number
     prof!: number
+    complete!: boolean
     addSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
     removeSkill!: BelongsToManyAddAssociationMixin<Skill['id'], Skill> //this function will be created by Sequelize, we need to add it here so that TS will recognize it
 
@@ -91,8 +92,11 @@ class Character extends Model {
                 },
                 prof: {
                     type: INTEGER
+                },
+                complete: {
+                    type: BOOLEAN,
+                    defaultValue: false
                 }
-
             },
             {
                 sequelize,

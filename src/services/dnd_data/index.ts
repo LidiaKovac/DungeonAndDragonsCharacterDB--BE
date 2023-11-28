@@ -292,7 +292,7 @@ passive_data_router.get("/class", async (req: Request, res: Response, next: Next
             },
             order: [["name", "ASC"]],
             include: complete === "true" ? [{ model: ClassTrait }] : [],
-            attributes: attributes!.split(",").concat("prof_1", "prof_2", "prof_3", "prof_4")
+            attributes: attributes ? attributes.split(",").concat("prof_1", "prof_2", "prof_3", "prof_4") : undefined
         })
         res.send(classes)
     } catch (error) {

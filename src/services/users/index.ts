@@ -53,7 +53,7 @@ userRoute.post(
           .set("Access-Control-Expose-Headers", "token")
           .set("token", token as string)
           .sendStatus(200)
-      } else res.send(404)
+      } else res.status(404).send("User wasn't found")
     } catch (error) {
       next(error)
     }
